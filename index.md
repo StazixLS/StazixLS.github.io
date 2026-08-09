@@ -5,10 +5,10 @@ title: Accueil
 
 <section id="profil" class="pane">
   <p class="pane-label">About.cs</p>
-  <h1 class="hero-name">[Ton Nom]<span class="cursor">_</span></h1>
+  <h1 class="hero-name">Sev FORNER<span class="cursor">_</span></h1>
   <p class="hero-role">
-    <span lang="fr">&gt; [ton métier / spécialité]</span>
-    <span lang="en" hidden>&gt; [your job title / specialty]</span>
+    <span lang="fr">&gt; Gameplay / AI / Tools Programmer</span>
+    <span lang="en" hidden>&gt; Gameplay / AI / Tools Programmer</span>
   </p>
   <p class="hero-bio">
     <span lang="fr">[Une présentation courte : qui tu es, ce que tu fais, ce que tu aimes construire. Deux à trois phrases suffisent.]</span>
@@ -16,12 +16,12 @@ title: Accueil
   </p>
   <div class="hero-actions">
     <a href="#projets" class="btn btn-fill">
-      <span lang="fr">voir mes projets</span>
-      <span lang="en" hidden>view my projects</span>
+      <span lang="fr">Voir mes projets</span>
+      <span lang="en" hidden>View my projects</span>
     </a>
     <a href="#contact" class="btn btn-line">
-      <span lang="fr">me contacter</span>
-      <span lang="en" hidden>get in touch</span>
+      <span lang="fr">Me contacter</span>
+      <span lang="en" hidden>Get in touch</span>
     </a>
   </div>
 </section>
@@ -109,8 +109,8 @@ title: Accueil
       <p class="oline">1&gt;------ Build started: Project: Contact, Configuration: Release Any CPU ------</p>
       <p class="oline">
         1&gt;&nbsp;
-        <span lang="fr">[Ton Nom] — [ex: ouvert aux opportunités]</span>
-        <span lang="en" hidden>[Your Name] — [e.g. open to opportunities]</span>
+        <span lang="fr">Sev FORNER — ouvert aux opportunités</span>
+        <span lang="en" hidden>Sev FORNER — open to opportunities</span>
       </p>
       <p class="oline">1&gt;  Resolving reference <a href="mailto:[ton.email@exemple.com]">Mail</a>... <span class="ok">OK</span></p>
       <p class="oline">1&gt;  Resolving reference <a href="https://github.com/[ton-pseudo]" target="_blank" rel="noopener">GitHub</a>... <span class="ok">OK</span></p>
