@@ -8,7 +8,7 @@ link: ""
 image: "/assets/projects/La Poste/Cover.svg"
 video: ""
 video_embed: ""
-gallery: ["/assets/projects/La Poste/Proto Cadena.png"]
+gallery: []
 description_fr: >
   [Décris ici ton rôle sur ce projet : ce que tu as développé, les défis techniques rencontrés, les résultats obtenus.]
 description_en: >
