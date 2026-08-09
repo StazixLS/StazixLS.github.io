@@ -30,6 +30,9 @@ Puis ouvre http://localhost:4000
     dans une iframe
   - Ne remplis qu'UN SEUL des trois champs `image` / `video` / `video_embed` par projet (le
     premier rempli est utilisé, les autres sont ignorés)
+  - `gallery`: liste optionnelle d'images/vidéos supplémentaires, affichées en petites vignettes
+    sous la description (ex: `gallery: ["/assets/projects/nelli-1.jpg", "/assets/projects/nelli-2.mp4"]`).
+    Les images ouvrent en grand dans un nouvel onglet au clic, les vidéos ont leurs contrôles direct.
 - `assets/css/style.css` → les couleurs sont tout en haut du fichier, dans `:root`
   (`--rose`, `--gold`, `--foam`, `--bg`...)
 
