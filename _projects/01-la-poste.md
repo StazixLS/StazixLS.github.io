@@ -8,6 +8,7 @@ link: ""
 image: ""
 video: ""
 video_embed: ""
+gallery: []
 description_fr: >
   [Décris ici ton rôle sur ce projet : ce que tu as développé, les défis techniques rencontrés, les résultats obtenus.]
 description_en: >
