@@ -11,8 +11,8 @@ title: Accueil
     <span lang="en" hidden>&gt; Gameplay / AI / Tools Programmer</span>
   </p>
   <p class="hero-bio">
-    <span lang="fr">[Une présentation courte : qui tu es, ce que tu fais, ce que tu aimes construire. Deux à trois phrases suffisent.]</span>
-    <span lang="en" hidden>[A short intro: who you are, what you do, what you like building. Two or three sentences is enough.]</span>
+    <span lang="fr">Développeur passionné par le jeu vidéo, je code en C++, C# et Python, et je navigue entre Unity, Unreal Engine et WPF selon les projets. J'aime particulièrement le gameplay et les outils qui simplifient le travail en équipe — transformer une idée en quelque chose de jouable, du prototype à la version finale.</span>
+    <span lang="en" hidden>I'm a game developer who codes in C++, C#, and Python, moving between Unity, Unreal Engine, and WPF depending on the project. I especially enjoy gameplay programming and building tools that make teamwork easier — turning an idea into something playable, from first prototype to final build.</span>
   </p>
   <div class="hero-actions">
     <a href="#projets" class="btn btn-fill">
