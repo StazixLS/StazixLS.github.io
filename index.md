@@ -64,6 +64,19 @@ title: Accueil
           <div lang="fr">{{ project.description_fr | markdownify }}</div>
           <div lang="en" hidden>{{ project.description_en | default: project.description_fr | markdownify }}</div>
         </div>
+        {% if project.gallery %}
+        <div class="gallery">
+          {% for item in project.gallery %}
+            {% if item contains ".mp4" or item contains ".webm" or item contains ".mov" %}
+            <video src="{{ item | relative_url }}" controls preload="none" class="gallery-item"></video>
+            {% else %}
+            <a href="{{ item | relative_url }}" target="_blank" rel="noopener" class="gallery-item">
+              <img src="{{ item | relative_url }}" alt="" loading="lazy">
+            </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
         {% if project.tags %}
         <div class="tags">
           {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
