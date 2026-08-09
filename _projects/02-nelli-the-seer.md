@@ -1,15 +1,15 @@
 ---
 title_fr: "Nelli the Seer"
 title_en: "Nelli the Seer"
-subtitle_fr: "[Sous-titre / genre du jeu]"
-subtitle_en: "[Subtitle / game genre]"
-tags: ["[Techno 1]", "[Techno 2]"]
+subtitle_fr: "Projet étudiant -- Jeu de PLatforme Casse tête"
+subtitle_en: "Student Project -- Puzzle-Platformer Game"
+tags: ["UE5", "C++"]
 link: ""
 image: ""
 video: ""
 video_embed: ""
 description_fr: >
-  [Description du projet — contexte, ton rôle, ce que tu as appris.]
+  UI / Corrections Bugs
 description_en: >
-  [Project description — context, your role, what you learned.]
+  UI / Bugs Fix
 ---
