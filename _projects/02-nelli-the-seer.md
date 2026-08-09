@@ -4,7 +4,7 @@ title_en: "Nelli the Seer"
 subtitle_fr: "Projet étudiant -- Jeu de Platforme Casse tête"
 subtitle_en: "Student Project -- Puzzle-Platformer Game"
 tags: ["UE5", "C++"]
-link: ""
+link: "https://store.steampowered.com/app/3801320/Nelli_The_Seer/"
 image: "/assets/projects/Nelli The Seer/Cover.png"
 video: ""
 video_embed: ""
