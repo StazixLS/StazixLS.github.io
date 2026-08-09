@@ -10,7 +10,7 @@ video: ""
 video_embed: ""
 gallery: []
 description_fr: >
-  [Décris ici ton rôle sur ce projet : ce que tu as développé, les défis techniques rencontrés, les résultats obtenus.]
+  Cadena / Etapes de Verifications du transpalette / Système de Hallo 
 description_en: >
-  [Describe your role on this project: what you built, the technical challenges, the results.]
+   Padlock / Inspection Steps for the Pallet Jack / Hallo System
 ---
