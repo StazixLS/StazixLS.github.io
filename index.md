@@ -75,8 +75,9 @@ title: Accueil
           <span lang="en" hidden>→ view project</span>
         </a>
         {% endif %}
+        <!--
       </div>
-      <!--
+      
     </article>
     {% endfor %}
 
@@ -91,8 +92,9 @@ title: Accueil
         <span lang="en" hidden>add a file in <code>_projects/</code></span>
       </p>
     </article>
-    -->
+    
   </div>
+  -->
 </section>
 
 <section id="contact" class="pane">
