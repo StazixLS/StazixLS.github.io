@@ -76,6 +76,7 @@ title: Accueil
         </a>
         {% endif %}
       </div>
+      <!--
     </article>
     {% endfor %}
 
@@ -90,6 +91,7 @@ title: Accueil
         <span lang="en" hidden>add a file in <code>_projects/</code></span>
       </p>
     </article>
+    -->
   </div>
 </section>
 
