@@ -8,6 +8,7 @@ link: ""
 image: ""
 video: ""
 video_embed: ""
+gallery: []
 description_fr: >
   UI / Corrections Bugs
 description_en: >
