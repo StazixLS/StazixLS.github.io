@@ -1,0 +1,15 @@
+title: "[Ton Nom] — Portfolio"
+description: "[Une phrase qui décrit ce que tu fais]"
+author: "[ton-pseudo]"
+
+collections:
+  projects:
+    output: false
+
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - SETUP.md
+  - preview.html

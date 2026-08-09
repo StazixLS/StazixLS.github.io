@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aperçu — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Preview-only: placeholder block standing in for a real project image */
+    .media-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(235,111,146,0.18), rgba(156,207,216,0.12));
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <div class="editor">
+
+    <div class="titlebar">
+      <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <span class="titlebar-path">Portfolio.sln — alex-martin — Visual Studio</span>
+      <div class="lang-switch" role="group" aria-label="Langue / Language">
+        <button type="button" class="lang-btn" data-lang-btn="fr" aria-pressed="true">FR</button>
+        <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+
+    <nav class="tabs" aria-label="Navigation">
+      <a href="#profil" class="tab active" data-tab="profil"><span class="tab-dot"></span>About.cs</a>
+      <a href="#projets" class="tab" data-tab="projets"><span class="tab-dot"></span>Projects.json</a>
+      <a href="#contact" class="tab" data-tab="contact"><span class="tab-dot"></span>Contact.xaml</a>
+    </nav>
+
+    <main class="editor-content">
+
+      <section id="profil" class="pane">
+        <p class="pane-label">About.cs</p>
+        <h1 class="hero-name">Alex Martin<span class="cursor">_</span></h1>
+        <p class="hero-role">
+          <span lang="fr">&gt; Gameplay &amp; Tools Programmer</span>
+          <span lang="en" hidden>&gt; Gameplay &amp; Tools Programmer</span>
+        </p>
+        <p class="hero-bio">
+          <span lang="fr">Je conçois des systèmes de gameplay et des outils sur Unity et Unreal Engine. J'aime le code propre, les problèmes de 3C et les petits outils qui font gagner du temps en prod.</span>
+          <span lang="en" hidden>I build gameplay systems and tools in Unity and Unreal Engine. I like clean code, character-controller problems, and small tools that save time in production.</span>
+        </p>
+        <div class="hero-actions">
+          <a href="#projets" class="btn btn-fill">
+            <span lang="fr">voir mes projets</span>
+            <span lang="en" hidden>view my projects</span>
+          </a>
+          <a href="#contact" class="btn btn-line">
+            <span lang="fr">me contacter</span>
+            <span lang="en" hidden>get in touch</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="projets" class="pane">
+        <p class="pane-label">Projects.json</p>
+        <h2 class="pane-title">
+          <span lang="fr">Projets</span>
+          <span lang="en" hidden>Projects</span>
+        </h2>
+
+        <div class="grid">
+          <article class="card">
+            <div class="media-placeholder">image ou vidéo du projet ici</div>
+            <div class="card-body">
+              <p class="card-meta">// project_1</p>
+              <h3 class="card-title">
+                <span lang="fr">Projet La Poste</span>
+                <span lang="en" hidden>La Poste Project</span>
+              </h3>
+              <p class="card-subtitle">
+                <span lang="fr">Serious game VR — formation &amp; sensibilisation</span>
+                <span lang="en" hidden>VR serious game — training &amp; awareness</span>
+              </p>
+              <div class="card-desc">
+                <div lang="fr"><p>Développement des systèmes IK mains/doigts, intégration des animations et du gameplay, dans un pipeline de production en équipe.</p></div>
+                <div lang="en" hidden><p>Built the hand/finger IK systems and integrated animation and gameplay, working within a team production pipeline.</p></div>
+              </div>
+              <div class="tags">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">VR</span>
+              </div>
+              <a class="card-link" href="#" target="_blank" rel="noopener">
+                <span lang="fr">→ voir le projet</span>
+                <span lang="en" hidden>→ view project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media-placeholder">image ou vidéo du projet ici</div>
+            <div class="card-body">
+              <p class="card-meta">// project_2</p>
+              <h3 class="card-title">Nelli the Seer</h3>
+              <p class="card-subtitle">
+                <span lang="fr">[Sous-titre / genre du jeu]</span>
+                <span lang="en" hidden>[Subtitle / game genre]</span>
+              </p>
+              <div class="card-desc">
+                <div lang="fr"><p>[Description du projet — contexte, ton rôle, ce que tu as appris.]</p></div>
+                <div lang="en" hidden><p>[Project description — context, your role, what you learned.]</p></div>
+              </div>
+              <div class="tags">
+                <span class="tag">Unreal Engine</span>
+                <span class="tag">C++</span>
+              </div>
+              <a class="card-link" href="#" target="_blank" rel="noopener">
+                <span lang="fr">→ voir le projet</span>
+                <span lang="en" hidden>→ view project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card card-empty">
+            <p class="card-meta">// project_next</p>
+            <p class="card-empty-text">
+              <span lang="fr">+ prochain projet</span>
+              <span lang="en" hidden>+ next project</span>
+            </p>
+            <p class="card-empty-hint">
+              <span lang="fr">ajoute un fichier dans <code>_projects/</code></span>
+              <span lang="en" hidden>add a file in <code>_projects/</code></span>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="pane">
+        <p class="pane-label">Contact.xaml</p>
+        <h2 class="pane-title">Contact</h2>
+
+        <div class="output-panel">
+          <div class="output-bar">
+            <span class="output-title">Output</span>
+            <span class="output-scope">
+              <span lang="fr">Afficher la sortie de : Contact</span>
+              <span lang="en" hidden>Show output from: Contact</span>
+            </span>
+          </div>
+          <div class="output-body">
+            <p class="oline">1&gt;------ Build started: Project: Contact, Configuration: Release Any CPU ------</p>
+            <p class="oline">
+              1&gt;&nbsp;
+              <span lang="fr">Alex Martin — ouvert aux opportunités</span>
+              <span lang="en" hidden>Alex Martin — open to opportunities</span>
+            </p>
+            <p class="oline">1&gt;  Resolving reference <a href="#">Mail</a>... <span class="ok">OK</span></p>
+            <p class="oline">1&gt;  Resolving reference <a href="#" target="_blank" rel="noopener">GitHub</a>... <span class="ok">OK</span></p>
+            <p class="oline">1&gt;  Resolving reference <a href="#" target="_blank" rel="noopener">LinkedIn</a>... <span class="ok">OK</span></p>
+            <p class="oline oline-summary">========== Build: 1 succeeded, 0 failed ==========</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <span class="comment">// © 2026 alex-martin — généré avec Jekyll</span>
+    </footer>
+
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
