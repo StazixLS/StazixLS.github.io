@@ -2,8 +2,8 @@
 order: 2
 title_fr: "Nelli the Seer"
 title_en: "Nelli the Seer"
-subtitle_fr: "Projet étudiant -- Jeu de Platforme Casse tête"
-subtitle_en: "Student Project -- Puzzle-Platformer Game"
+subtitle_fr: "Projet étudiant — Jeu de Platforme Casse tête"
+subtitle_en: "Student Project — Puzzle-Platformer Game"
 summary_fr: "UI / Corrections Bugs"
 summary_en: "UI / Bugs Fix"
 tags: ["UE5", "C++"]
