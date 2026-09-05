@@ -8,6 +8,7 @@ summary_fr: "UI / Corrections Bugs"
 summary_en: "UI / Bugs Fix"
 tags: ["UE5", "C++"]
 link: "https://store.steampowered.com/app/3801320/Nelli_The_Seer/"
+download: ""
 image: "/assets/projects/Nelli The Seer/Cover.png"
 video: ""
 video_embed: ""

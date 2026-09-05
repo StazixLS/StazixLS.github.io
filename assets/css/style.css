@@ -221,6 +221,7 @@ a { color: inherit; text-decoration: none; }
 .card-link { font-family: var(--font-mono); font-size: 13px; color: var(--rose); }
 .card-link:hover { text-decoration: underline; }
 .card-link-ext { color: var(--foam); }
+.card-link-download { color: var(--gold); }
 
 .card-empty {
   display: flex;
@@ -317,24 +318,61 @@ a { color: inherit; text-decoration: none; }
   margin: 6px 24px 16px 0;
 }
 
+.project-body a {
+  color: var(--rose);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.project-body a:hover { color: var(--foam); }
+
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 14px;
   margin-top: 20px;
 }
-.project-gallery a,
-.project-gallery video {
+.gallery-item {
+  position: relative;
   display: block;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border);
   aspect-ratio: 4 / 3;
-  transition: border-color 0.15s ease, transform 0.15s ease;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  scroll-margin-top: 100px;
 }
-.project-gallery a:hover { border-color: var(--rose); transform: translateY(-2px); }
-.project-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.project-gallery video { width: 100%; height: 100%; object-fit: cover; }
+.gallery-item:hover { border-color: var(--rose); transform: translateY(-2px); }
+.gallery-item:target {
+  border-color: var(--rose);
+  box-shadow: 0 0 0 4px var(--rose-soft);
+  animation: gallery-pulse 1.6s ease-out 1;
+}
+@keyframes gallery-pulse {
+  0% { box-shadow: 0 0 0 0 var(--rose-soft); }
+  50% { box-shadow: 0 0 0 8px var(--rose-soft); }
+  100% { box-shadow: 0 0 0 4px var(--rose-soft); }
+}
+.gallery-item img,
+.gallery-item video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gallery-index {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2px 6px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+.gallery-hint {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+.gallery-hint code { background: var(--bg); padding: 2px 6px; border-radius: 4px; color: var(--foam); }
 
 /* Footer */
 .footer { padding: 24px 48px 40px; border-top: 1px solid var(--border); }

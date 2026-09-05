@@ -37,11 +37,21 @@ layout: default
   </div>
   {% endif %}
 
-  {% if page.link and page.link != "" %}
-  <a class="card-link" href="{{ page.link }}" target="_blank" rel="noopener">
-    <span lang="fr">↗ voir le projet en ligne</span>
-    <span lang="en" hidden>↗ view live project</span>
-  </a>
+  {% if page.link and page.link != "" or page.download and page.download != "" %}
+  <div class="card-actions">
+    {% if page.link and page.link != "" %}
+    <a class="card-link" href="{{ page.link }}" target="_blank" rel="noopener">
+      <span lang="fr">↗ voir le projet en ligne</span>
+      <span lang="en" hidden>↗ view live project</span>
+    </a>
+    {% endif %}
+    {% if page.download and page.download != "" %}
+    <a class="card-link card-link-download" href="{{ page.download }}" target="_blank" rel="noopener">
+      <span lang="fr">↓ télécharger</span>
+      <span lang="en" hidden>↓ download</span>
+    </a>
+    {% endif %}
+  </div>
   {% endif %}
 
   <div class="project-body">
@@ -54,14 +64,22 @@ layout: default
   <div class="project-gallery">
     {% for item in page.gallery %}
       {% if item contains ".mp4" or item contains ".webm" or item contains ".mov" %}
-      <video src="{{ item | relative_url }}" controls preload="none"></video>
+      <div id="gallery-{{ forloop.index }}" class="gallery-item">
+        <video src="{{ item | relative_url }}" controls preload="none"></video>
+        <span class="gallery-index">#{{ forloop.index }}</span>
+      </div>
       {% else %}
-      <a href="{{ item | relative_url }}" target="_blank" rel="noopener">
+      <a id="gallery-{{ forloop.index }}" class="gallery-item" href="{{ item | relative_url }}" target="_blank" rel="noopener">
         <img src="{{ item | relative_url }}" alt="" loading="lazy">
+        <span class="gallery-index">#{{ forloop.index }}</span>
       </a>
       {% endif %}
     {% endfor %}
   </div>
+  <p class="gallery-hint">
+    <span lang="fr">Astuce : lie un mot de ton texte à une image avec <code>[texte](#gallery-2)</code></span>
+    <span lang="en" hidden>Tip: link a word in your text to an image with <code>[text](#gallery-2)</code></span>
+  </p>
   {% endif %}
 
   <a href="{{ '/' | relative_url }}#projets" class="back-link back-link-bottom">

@@ -8,6 +8,7 @@ summary_fr: "Cadena / Etapes de Verifications du transpalette / Système de Hall
 summary_en: "Padlock / Inspection Steps for the Pallet Jack / Hallo System"
 tags: ["Unity", "C#", "VR"]
 link: ""
+download: ""
 image: "/assets/projects/La Poste/Cover.svg"
 video: ""
 video_embed: ""
