@@ -29,9 +29,7 @@ rien changer à ta config ni passer par un hébergement externe. Le site reste �
 - `description_fr` / `description_en`: le texte complet, affiché sur la page dédiée du projet
   (`/projects/nom-du-projet/`) — aussi long que tu veux, plusieurs paragraphes
 - `tags`: liste de technos
-- `link`: lien externe optionnel (Steam, page du studio...), affiché en plus du lien interne
-- `download`: lien de téléchargement optionnel (ex: build .zip, exécutable, page itch.io de download),
-  affiché séparément de `link` — les deux peuvent être présents en même temps
+- `link`: lien externe optionnel (Steam, page du studio, itch.io...), affiché en plus du lien interne
 - `image` / `video` / `video_embed`: média principal, affiché en haut de la carte ET en haut de
   la page dédiée. Ne remplis qu'un seul des trois
 - `gallery`: liste d'images/vidéos supplémentaires, affichées en bas de la page dédiée du projet

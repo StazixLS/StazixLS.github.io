@@ -84,12 +84,6 @@ title: Accueil
             <span lang="en" hidden>↗ view live</span>
           </a>
           {% endif %}
-          {% if project.download and project.download != "" %}
-          <a class="card-link card-link-download" href="{{ project.download }}" target="_blank" rel="noopener">
-            <span lang="fr">↓ télécharger</span>
-            <span lang="en" hidden>↓ download</span>
-          </a>
-          {% endif %}
         </div>
       </div>
     </article>

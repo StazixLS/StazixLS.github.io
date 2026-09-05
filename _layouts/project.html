@@ -37,21 +37,11 @@ layout: default
   </div>
   {% endif %}
 
-  {% if page.link and page.link != "" or page.download and page.download != "" %}
-  <div class="card-actions">
-    {% if page.link and page.link != "" %}
-    <a class="card-link" href="{{ page.link }}" target="_blank" rel="noopener">
-      <span lang="fr">↗ voir le projet en ligne</span>
-      <span lang="en" hidden>↗ view live project</span>
-    </a>
-    {% endif %}
-    {% if page.download and page.download != "" %}
-    <a class="card-link card-link-download" href="{{ page.download }}" target="_blank" rel="noopener">
-      <span lang="fr">↓ télécharger</span>
-      <span lang="en" hidden>↓ download</span>
-    </a>
-    {% endif %}
-  </div>
+  {% if page.link and page.link != "" %}
+  <a class="card-link" href="{{ page.link }}" target="_blank" rel="noopener">
+    <span lang="fr">↗ voir le projet en ligne</span>
+    <span lang="en" hidden>↗ view live project</span>
+  </a>
   {% endif %}
 
   <div class="project-body">
@@ -76,10 +66,6 @@ layout: default
       {% endif %}
     {% endfor %}
   </div>
-  <p class="gallery-hint">
-    <span lang="fr">Astuce : lie un mot de ton texte à une image avec <code>[texte](#gallery-2)</code></span>
-    <span lang="en" hidden>Tip: link a word in your text to an image with <code>[text](#gallery-2)</code></span>
-  </p>
   {% endif %}
 
   <a href="{{ '/' | relative_url }}#projets" class="back-link back-link-bottom">
