@@ -21,7 +21,7 @@ layout: default
   </div>
   {% endif %}
 
-  <p class="pane-label">// project.md</p>
+  <p class="pane-label"> project.md</p>
   <h1 class="project-title">
     <span lang="fr">{{ page.title_fr }}</span>
     <span lang="en" hidden>{{ page.title_en | default: page.title_fr }}</span>
@@ -50,7 +50,7 @@ layout: default
   </div>
 
   {% if page.gallery %}
-  <p class="pane-label">// gallery</p>
+  <p class="pane-label"> gallery</p>
   <div class="project-gallery">
     {% for item in page.gallery %}
       {% if item contains ".mp4" or item contains ".webm" or item contains ".mov" %}
