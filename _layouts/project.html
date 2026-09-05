@@ -1,0 +1,71 @@
+---
+layout: default
+---
+<article class="project-page">
+  <a href="{{ '/' | relative_url }}#projets" class="back-link">
+    <span lang="fr">← retour aux projets</span>
+    <span lang="en" hidden>← back to projects</span>
+  </a>
+
+  {% if page.image and page.image != "" %}
+  <div class="project-hero-media">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title_fr }}">
+  </div>
+  {% elsif page.video and page.video != "" %}
+  <div class="project-hero-media">
+    <video src="{{ page.video | relative_url }}" controls preload="metadata"></video>
+  </div>
+  {% elsif page.video_embed and page.video_embed != "" %}
+  <div class="project-hero-media project-hero-media-embed">
+    <iframe src="{{ page.video_embed }}" title="{{ page.title_fr }}" loading="lazy" allowfullscreen></iframe>
+  </div>
+  {% endif %}
+
+  <p class="pane-label">// project.md</p>
+  <h1 class="project-title">
+    <span lang="fr">{{ page.title_fr }}</span>
+    <span lang="en" hidden>{{ page.title_en | default: page.title_fr }}</span>
+  </h1>
+  <p class="project-subtitle">
+    <span lang="fr">{{ page.subtitle_fr }}</span>
+    <span lang="en" hidden>{{ page.subtitle_en | default: page.subtitle_fr }}</span>
+  </p>
+
+  {% if page.tags %}
+  <div class="tags">
+    {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page.link and page.link != "" %}
+  <a class="card-link" href="{{ page.link }}" target="_blank" rel="noopener">
+    <span lang="fr">↗ voir le projet en ligne</span>
+    <span lang="en" hidden>↗ view live project</span>
+  </a>
+  {% endif %}
+
+  <div class="project-body">
+    <div lang="fr">{{ page.description_fr | markdownify }}</div>
+    <div lang="en" hidden>{{ page.description_en | default: page.description_fr | markdownify }}</div>
+  </div>
+
+  {% if page.gallery %}
+  <p class="pane-label">// gallery</p>
+  <div class="project-gallery">
+    {% for item in page.gallery %}
+      {% if item contains ".mp4" or item contains ".webm" or item contains ".mov" %}
+      <video src="{{ item | relative_url }}" controls preload="none"></video>
+      {% else %}
+      <a href="{{ item | relative_url }}" target="_blank" rel="noopener">
+        <img src="{{ item | relative_url }}" alt="" loading="lazy">
+      </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <a href="{{ '/' | relative_url }}#projets" class="back-link back-link-bottom">
+    <span lang="fr">← retour aux projets</span>
+    <span lang="en" hidden>← back to projects</span>
+  </a>
+</article>

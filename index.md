@@ -5,6 +5,9 @@ title: Accueil
 
 <section id="profil" class="pane">
   <p class="pane-label">About.cs</p>
+  {% if site.avatar and site.avatar != "" %}
+  <img src="{{ site.avatar | relative_url }}" alt="{{ site.author }}" class="hero-avatar">
+  {% endif %}
   <h1 class="hero-name">Sev FORNER<span class="cursor">_</span></h1>
   <p class="hero-role">
     <span lang="fr">&gt; Gameplay / AI / Tools Programmer</span>
@@ -34,7 +37,8 @@ title: Accueil
   </h2>
 
   <div class="grid">
-    {% for project in site.projects %}
+    {% assign sorted_projects = site.projects | sort: "order" %}
+    {% for project in sorted_projects %}
     <article class="card">
       {% if project.image and project.image != "" %}
       <div class="card-media">
@@ -60,37 +64,31 @@ title: Accueil
           <span lang="fr">{{ project.subtitle_fr }}</span>
           <span lang="en" hidden>{{ project.subtitle_en | default: project.subtitle_fr }}</span>
         </p>
-        <div class="card-desc">
-          <div lang="fr">{{ project.description_fr | markdownify }}</div>
-          <div lang="en" hidden>{{ project.description_en | default: project.description_fr | markdownify }}</div>
-        </div>
-        {% if project.gallery %}
-        <div class="gallery">
-          {% for item in project.gallery %}
-            {% if item contains ".mp4" or item contains ".webm" or item contains ".mov" %}
-            <video src="{{ item | relative_url }}" controls preload="none" class="gallery-item"></video>
-            {% else %}
-            <a href="{{ item | relative_url }}" target="_blank" rel="noopener" class="gallery-item">
-              <img src="{{ item | relative_url }}" alt="" loading="lazy">
-            </a>
-            {% endif %}
-          {% endfor %}
-        </div>
-        {% endif %}
+        <p class="card-summary">
+          <span lang="fr">{{ project.summary_fr }}</span>
+          <span lang="en" hidden>{{ project.summary_en | default: project.summary_fr }}</span>
+        </p>
         {% if project.tags %}
         <div class="tags">
           {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
         </div>
         {% endif %}
-        {% if project.link and project.link != "" %}
-        <a class="card-link" href="{{ project.link }}" target="_blank" rel="noopener">
-          <span lang="fr">→ voir le projet</span>
-          <span lang="en" hidden>→ view project</span>
-        </a>
-        {% endif %}
+        <div class="card-actions">
+          <a class="card-link" href="{{ project.url | relative_url }}">
+            <span lang="fr">→ en savoir plus</span>
+            <span lang="en" hidden>→ learn more</span>
+          </a>
+          {% if project.link and project.link != "" %}
+          <a class="card-link card-link-ext" href="{{ project.link }}" target="_blank" rel="noopener">
+            <span lang="fr">↗ voir en ligne</span>
+            <span lang="en" hidden>↗ view live</span>
+          </a>
+          {% endif %}
+        </div>
       </div>
     </article>
     {% endfor %}
+
     <article class="card card-empty">
       <p class="card-meta">// project_next</p>
       <p class="card-empty-text">
@@ -127,7 +125,7 @@ title: Accueil
         <span lang="en" hidden>Sev FORNER — open to opportunities</span>
       </p>
       <p class="oline">1&gt;  Resolving reference <a href="mailto:[ton.email@exemple.com]">Mail</a>... <span class="ok">OK</span></p>
-      <p class="oline">1&gt;  Resolving reference <a href="https://github.com/[ton-pseudo]" target="_blank" rel="noopener">GitHub</a>... <span class="ok">OK</span></p>
+      <p class="oline">1&gt;  Resolving reference <a href="https://github.com/{{ site.author }}" target="_blank" rel="noopener">GitHub</a>... <span class="ok">OK</span></p>
       <p class="oline">1&gt;  Resolving reference <a href="https://linkedin.com/in/[ton-linkedin]" target="_blank" rel="noopener">LinkedIn</a>... <span class="ok">OK</span></p>
       <p class="oline oline-summary">========== Build: 1 succeeded, 0 failed ==========</p>
     </div>

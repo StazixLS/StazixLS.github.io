@@ -1,5 +1,6 @@
+{% assign home = "/" | relative_url %}
 <nav class="tabs" aria-label="Navigation">
-  <a href="#profil" class="tab" data-tab="profil"><span class="tab-dot"></span>About.cs</a>
-  <a href="#projets" class="tab" data-tab="projets"><span class="tab-dot"></span>Projects.json</a>
-  <a href="#contact" class="tab" data-tab="contact"><span class="tab-dot"></span>Contact.xaml</a>
+  <a href="{{ home }}#profil" class="tab" data-tab="profil"><span class="tab-dot"></span>About.cs</a>
+  <a href="{{ home }}#projets" class="tab" data-tab="projets"><span class="tab-dot"></span>Projects.json</a>
+  <a href="{{ home }}#contact" class="tab" data-tab="contact"><span class="tab-dot"></span>Contact.xaml</a>
 </nav>

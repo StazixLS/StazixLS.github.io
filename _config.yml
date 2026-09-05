@@ -1,10 +1,19 @@
 title: "Sev FORNER — Portfolio"
 description: "Gameplay / AI / Tools Programmer"
 author: "StazixLS"
+avatar: ""
 
 collections:
   projects:
-    output: false
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
 
 markdown: kramdown
 
@@ -13,3 +22,4 @@ exclude:
   - Gemfile.lock
   - SETUP.md
   - preview.html
+  - preview-project.html

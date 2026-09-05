@@ -1,8 +1,9 @@
 # Setup
 
 ## Voir le rendu tout de suite (sans installer Jekyll)
-Ouvre `preview.html` directement dans ton navigateur (double-clic). C'est une version statique
-avec du faux contenu, juste pour voir le style — ce n'est pas le vrai site.
+Ouvre `preview.html` dans ton navigateur pour la page d'accueil, et `preview-project.html`
+pour un exemple de page projet (avec une image flottante dans le texte). Ce sont des versions
+statiques avec du faux contenu, juste pour voir le style — pas le vrai site.
 
 ## Faire tourner le vrai site en local
 Il faut Ruby + Bundler installés sur ta machine.
@@ -14,37 +15,71 @@ bundle exec jekyll serve
 
 Puis ouvre http://localhost:4000
 
-## Personnaliser
-- `_config.yml` → titre, description, ton pseudo GitHub (`author`)
-- `index.md` → texte de la section Profil et de la section Contact
-- `_projects/*.md` → un fichier par projet. Pour ajouter un projet plus tard, duplique un fichier
-  dans `_projects/`, il apparaît automatiquement dans la grille. Chaque projet a :
-  - `title_fr` / `title_en`, `subtitle_fr` / `subtitle_en`, `description_fr` / `description_en`
-  - `tags`: liste de technos
-  - `link`: lien externe optionnel (ex: page Steam, GitHub du projet)
-  - `image`: chemin vers une image (ex: `/assets/projects/nelli.jpg`) — mets le fichier dans
-    `assets/projects/`
-  - `video`: chemin vers un fichier vidéo (ex: `/assets/projects/nelli.mp4`), affiché avec les
-    contrôles de lecture natifs
-  - `video_embed`: URL d'embed (ex: un lien YouTube/Vimeo au format `.../embed/...`), affiché
-    dans une iframe
-  - Ne remplis qu'UN SEUL des trois champs `image` / `video` / `video_embed` par projet (le
-    premier rempli est utilisé, les autres sont ignorés)
-  - `gallery`: liste optionnelle d'images/vidéos supplémentaires, affichées en petites vignettes
-    sous la description (ex: `gallery: ["/assets/projects/nelli-1.jpg", "/assets/projects/nelli-2.mp4"]`).
-    Les images ouvrent en grand dans un nouvel onglet au clic, les vidéos ont leurs contrôles direct.
-- `assets/css/style.css` → les couleurs sont tout en haut du fichier, dans `:root`
-  (`--rose`, `--gold`, `--foam`, `--bg`...)
+## Ça reste 100% GitHub Pages
+Chaque projet a maintenant sa propre page (`/projects/nom-du-projet/`), générée automatiquement
+à partir des fichiers dans `_projects/`. C'est une fonctionnalité native de Jekyll (les "collections"),
+pas un plugin — donc ça continue de marcher avec le build Jekyll standard de GitHub Pages, sans
+rien changer à ta config ni passer par un hébergement externe. Le site reste à
+`https://ton-pseudo.github.io`.
+
+## Structure d'un projet (`_projects/*.md`)
+- `order`: nombre pour l'ordre d'affichage (1, 2, 3...)
+- `title_fr` / `title_en`, `subtitle_fr` / `subtitle_en`
+- `summary_fr` / `summary_en`: UNE phrase courte, affichée sur la carte de la page d'accueil
+- `description_fr` / `description_en`: le texte complet, affiché sur la page dédiée du projet
+  (`/projects/nom-du-projet/`) — aussi long que tu veux, plusieurs paragraphes
+- `tags`: liste de technos
+- `link`: lien externe optionnel (Steam, page du studio...), affiché en plus du lien interne
+- `image` / `video` / `video_embed`: média principal, affiché en haut de la carte ET en haut de
+  la page dédiée. Ne remplis qu'un seul des trois
+- `gallery`: liste d'images/vidéos supplémentaires, affichées en bas de la page dédiée du projet
+  (pas sur la carte d'accueil — trop petit pour bien les montrer)
+
+## Ajouter un nouveau projet
+Duplique un fichier dans `_projects/`, donne-lui un nom de fichier différent (ex: `mon-jeu.md`) et
+un `order` différent. Il apparaît automatiquement dans la grille et obtient sa propre page.
+
+## Photo de profil
+Dans `_config.yml`, remplis `avatar` avec le chemin vers ta photo (ex: `/assets/avatar.jpg`).
+Mets le fichier dans `assets/`. Laisse `avatar: ""` si tu ne veux pas de photo — la section About
+s'affiche normalement sans.
+
+## Placer une image ou vidéo précisément dans le texte
+Dans `description_fr` / `description_en`, tu écris du Markdown normal. Pour insérer une image ou
+une vidéo à un endroit précis (par exemple flottante à droite, avec le texte qui s'enroule autour) :
+
+```markdown
+description_fr: >
+  Premier paragraphe qui présente le projet.
+
+  ![Description de l'image](/assets/projects/nelli-combat.jpg){: .float-right }
+
+  Le texte continue ici et s'enroule autour de l'image à droite.
+  Utilise `.float-left` pour la faire flotter à gauche à la place.
+
+  Un paragraphe normal, sans image, redevient pleine largeur.
+```
+
+Pour une vidéo au même endroit dans le texte (au lieu d'une image), utilise du HTML directement :
+
+```markdown
+description_fr: >
+  Texte avant la vidéo.
+
+  <video src="/assets/projects/nelli-demo.mp4" controls class="float-right"></video>
+
+  Le texte continue autour de la vidéo.
+```
+
+Mets tes fichiers médias dans `assets/projects/` (crée le dossier s'il n'existe pas), puis
+référence-les avec un chemin qui commence par `/assets/projects/...`.
 
 ## Langue FR / EN
 Le site est bilingue : un bouton FR/EN en haut à droite bascule tout le texte, et le choix est
 mémorisé dans le navigateur du visiteur. Ça marche avec le Jekyll natif de GitHub Pages (pas besoin
 de plugin ni de build spécial) : les deux langues sont générées dans la même page HTML, et un petit
-script JS affiche/masque le bon bloc.
-
-Pour que tout reste bilingue quand tu ajoutes du contenu, pense à toujours remplir les deux
-versions (`_fr` et `_en`) dans `_projects/*.md`, et à dupliquer les blocs `<span lang="fr">…</span>`
-/ `<span lang="en" hidden>…</span>` si tu ajoutes du texte dans `index.md`.
+script JS affiche/masque le bon bloc. Pense à toujours remplir les deux versions (`_fr` et `_en`)
+de chaque champ.
 
 ## Mettre en ligne avec GitHub Pages
 1. Crée un repo qui s'appelle **exactement** `ton-pseudo.github.io`

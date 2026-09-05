@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aperçu — Page projet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Preview-only: stand-ins for real images/videos */
+    .media-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(235,111,146,0.18), rgba(156,207,216,0.12));
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 12px;
+    }
+    .media-placeholder-float {
+      float: right;
+      width: 45%;
+      aspect-ratio: 4 / 3;
+      margin: 6px 0 16px 24px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .gallery-placeholder {
+      aspect-ratio: 4 / 3;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(246,193,119,0.18), rgba(156,207,216,0.12));
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+  <div class="editor">
+
+    <div class="titlebar">
+      <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <span class="titlebar-path">Portfolio.sln — alex-martin — Visual Studio</span>
+      <div class="lang-switch" role="group" aria-label="Langue / Language">
+        <button type="button" class="lang-btn" data-lang-btn="fr" aria-pressed="true">FR</button>
+        <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+
+    <nav class="tabs" aria-label="Navigation">
+      <a href="preview.html#profil" class="tab" data-tab="profil"><span class="tab-dot"></span>About.cs</a>
+      <a href="preview.html#projets" class="tab" data-tab="projets"><span class="tab-dot"></span>Projects.json</a>
+      <a href="preview.html#contact" class="tab" data-tab="contact"><span class="tab-dot"></span>Contact.xaml</a>
+    </nav>
+
+    <main class="editor-content">
+      <article class="project-page">
+        <a href="preview.html#projets" class="back-link">
+          <span lang="fr">← retour aux projets</span>
+          <span lang="en" hidden>← back to projects</span>
+        </a>
+
+        <div class="project-hero-media">
+          <div class="media-placeholder">image ou vidéo principale du projet</div>
+        </div>
+
+        <p class="pane-label">// project.md</p>
+        <h1 class="project-title">
+          <span lang="fr">Projet La Poste</span>
+          <span lang="en" hidden>La Poste Project</span>
+        </h1>
+        <p class="project-subtitle">
+          <span lang="fr">Serious game VR — formation &amp; sensibilisation</span>
+          <span lang="en" hidden>VR serious game — training &amp; awareness</span>
+        </p>
+
+        <div class="tags">
+          <span class="tag">Unity</span>
+          <span class="tag">C#</span>
+          <span class="tag">VR</span>
+        </div>
+
+        <div class="project-body">
+          <div lang="fr">
+            <p>Ce projet est un serious game en réalité virtuelle développé pour un module de formation professionnelle. J'étais en charge des systèmes d'interaction main/objet et de l'intégration du gameplay dans le moteur Unity.</p>
+            <div class="media-placeholder media-placeholder-float">capture d'écran flottante à droite</div>
+            <p>Le texte s'enroule naturellement autour de l'image, comme dans un article — pratique pour illustrer un point précis sans casser le rythme de lecture. Tu peux placer autant d'images ou de vidéos que nécessaire, à n'importe quel endroit du texte, en flottant à gauche ou à droite.</p>
+            <p>Un des principaux défis techniques a été la synchronisation entre les animations d'IK des mains et les objets interactifs de la scène, pour que la prise en main reste crédible même avec des contrôleurs VR d'entrée de gamme.</p>
+          </div>
+        </div>
+
+        <p class="pane-label">// gallery</p>
+        <div class="project-gallery">
+          <div class="gallery-placeholder">image 1</div>
+          <div class="gallery-placeholder">image 2</div>
+          <div class="gallery-placeholder">vidéo</div>
+        </div>
+
+        <a href="preview.html#projets" class="back-link back-link-bottom">
+          <span lang="fr">← retour aux projets</span>
+          <span lang="en" hidden>← back to projects</span>
+        </a>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <span class="comment">// © 2026 alex-martin — généré avec Jekyll</span>
+    </footer>
+
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
