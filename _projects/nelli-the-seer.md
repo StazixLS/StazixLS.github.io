@@ -14,7 +14,7 @@ video: ""
 video_embed: ""
 gallery: []
 description_fr: >
-  UI / Corrections Bugs
+  UI / Corrections Bugs / ![COVER](/assets/projects/Nelli The Seer/Cover.png){: .float-right }
 description_en: >
-  UI / Bugs Fix
+  UI / Bugs Fix / ![COVER](/assets/projects/Nelli The Seer/Cover.png){: .float-right }
 ---
