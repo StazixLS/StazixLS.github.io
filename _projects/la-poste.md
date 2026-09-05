@@ -14,7 +14,7 @@ video: ""
 video_embed: ""
 gallery: ["/assets/projects/La Poste/Proto Cadena.png"]
 description_fr: >
-  Cadena / Etapes de Verifications du transpalette / Système de Hallo
+  Cadena [(Proto sur l'image)](#gallery-1) / Etapes de Verifications du transpalette / Système de Hallo
 description_en: >
   Padlock / Inspection Steps for the Pallet Jack / Hallo System
 ---
