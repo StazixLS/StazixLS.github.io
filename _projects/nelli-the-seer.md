@@ -1,5 +1,5 @@
 ---
-start_date: ""
+start_date: "2025-04"
 end_date: "2025-07"
 project_type: "student"
 title_fr: "Nelli the Seer"
