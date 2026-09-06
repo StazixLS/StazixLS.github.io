@@ -39,12 +39,6 @@ layout: default
     <span lang="en" hidden>{% include date-range.html start=page.start_date end=page.end_date lang="en" %}</span>
   </p>
   {% endif %}
-  {% if page.secondary_end_date and page.secondary_end_date != "" %}
-  <p class="project-dates project-dates-secondary">
-    <span lang="fr">↳ {{ page.secondary_label_fr }} — jusqu'en {% include format-month.html date=page.secondary_end_date lang="fr" %}</span>
-    <span lang="en" hidden>↳ {{ page.secondary_label_en | default: page.secondary_label_fr }} — until {% include format-month.html date=page.secondary_end_date lang="en" %}</span>
-  </p>
-  {% endif %}
   <p class="project-subtitle">
     <span lang="fr">{{ page.subtitle_fr }}</span>
     <span lang="en" hidden>{{ page.subtitle_en | default: page.subtitle_fr }}</span>

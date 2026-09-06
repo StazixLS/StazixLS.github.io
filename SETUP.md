@@ -26,12 +26,6 @@ rien changer à ta config ni passer par un hébergement externe. Le site reste �
 - `start_date` / `end_date`: format `"YYYY-MM"` (ex: `"2024-09"`). Les projets sont triés
   automatiquement du plus récent au plus ancien sur `start_date` — plus besoin de gérer un ordre
   à la main. Laisse `end_date: ""` si le projet est toujours en cours, ça affichera "présent"
-- `secondary_end_date` / `secondary_label_fr` / `secondary_label_en` : optionnel, pour le cas
-  d'un projet dont la version officielle est terminée mais que tu as continué à faire évoluer
-  de ton côté (ex: un projet étudiant rendu en juillet 2025, avec des correctifs personnels
-  poussés jusqu'en août 2026). Affiche une deuxième ligne sous la date principale, du style
-  « ↳ Maintenance & améliorations personnelles — jusqu'en août 2026 ». Laisse
-  `secondary_end_date: ""` si ça ne s'applique pas
 - `project_type`: un des 4 types définis dans `_data/project_types.yml` — `pro`, `student`,
   `personal`, ou `gamejam`. Affiché en badge coloré sur la carte et la page dédiée. Pour ajouter
   un 5ème type, il suffit d'ajouter une entrée dans ce fichier data, pas besoin de toucher au code

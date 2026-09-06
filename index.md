@@ -73,12 +73,6 @@ title: Accueil
           <span lang="en" hidden>{% include date-range.html start=project.start_date end=project.end_date lang="en" %}</span>
         </p>
         {% endif %}
-        {% if project.secondary_end_date and project.secondary_end_date != "" %}
-        <p class="card-dates card-dates-secondary">
-          <span lang="fr">↳ {{ project.secondary_label_fr }} — jusqu'en {% include format-month.html date=project.secondary_end_date lang="fr" %}</span>
-          <span lang="en" hidden>↳ {{ project.secondary_label_en | default: project.secondary_label_fr }} — until {% include format-month.html date=project.secondary_end_date lang="en" %}</span>
-        </p>
-        {% endif %}
         <p class="card-subtitle">
           <span lang="fr">{{ project.subtitle_fr }}</span>
           <span lang="en" hidden>{{ project.subtitle_en | default: project.subtitle_fr }}</span>

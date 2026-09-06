@@ -1,9 +1,6 @@
 ---
 start_date: ""
 end_date: "2025-07"
-secondary_end_date: "2026-08"
-secondary_label_fr: "Maintenance & améliorations personnelles"
-secondary_label_en: "Personal maintenance & improvements"
 project_type: "student"
 title_fr: "Nelli the Seer"
 title_en: "Nelli the Seer"

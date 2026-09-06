@@ -1,13 +1,15 @@
 {%- assign parts = include.start | split: "-" -%}
 {%- assign year = parts[0] -%}
 {%- assign month_num = parts[1] | plus: 0 -%}
-{%- assign month_name = site.data.months[include.lang][month_num | minus: 1] -%}
+{%- assign month_index = month_num | minus: 1 -%}
+{%- assign month_name = site.data.months[include.lang][month_index] -%}
 {{ month_name }} {{ year }} —
 {%- if include.end and include.end != "" -%}
   {%- assign eparts = include.end | split: "-" -%}
   {%- assign eyear = eparts[0] -%}
   {%- assign emonth_num = eparts[1] | plus: 0 -%}
-  {%- assign emonth_name = site.data.months[include.lang][emonth_num | minus: 1] -%}
+  {%- assign emonth_index = emonth_num | minus: 1 -%}
+  {%- assign emonth_name = site.data.months[include.lang][emonth_index] -%}
   {{ emonth_name }} {{ eyear }}
 {%- else -%}
   {%- if include.lang == "fr" %} présent{% else %} present{% endif -%}
