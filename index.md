@@ -102,19 +102,19 @@ title: Accueil
     </article>
     {% endfor %}
 
+    <!--
     <article class="card card-empty">
       <p class="card-meta">// project_next</p>
       <p class="card-empty-text">
         <span lang="fr">+ prochain projet</span>
         <span lang="en" hidden>+ next project</span>
       </p>
-      <!--
       <p class="card-empty-hint">
         <span lang="fr">ajoute un fichier dans <code>_projects/</code></span>
         <span lang="en" hidden>add a file in <code>_projects/</code></span>
       </p>
-      -->
     </article>
+     -->
   </div>
 </section>
 
