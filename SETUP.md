@@ -71,35 +71,76 @@ description_fr: >
   Le texte continue autour de la vidéo.
 ```
 
-## Placer une image ou vidéo précisément dans le texte
-Dans `description_fr` / `description_en`, tu écris du Markdown normal. Pour insérer une image ou
-une vidéo à un endroit précis (par exemple flottante à droite, avec le texte qui s'enroule autour) :
+Mets tes fichiers médias dans `assets/projects/` (crée le dossier s'il n'existe pas), puis
+référence-les avec un chemin qui commence par `/assets/projects/...`.
 
+### Une image ou vidéo qui vient d'ailleurs (URL externe)
+Marche pareil, remplace juste le chemin par une URL complète :
 ```markdown
-description_fr: >
-  Premier paragraphe qui présente le projet.
-
-  ![Description de l'image](/assets/projects/nelli-combat.jpg){: .float-right }
-
-  Le texte continue ici et s'enroule autour de l'image à droite.
-  Utilise `.float-left` pour la faire flotter à gauche à la place.
-
-  Un paragraphe normal, sans image, redevient pleine largeur.
+![Description](https://exemple.com/mon-image.jpg){: .float-right }
 ```
 
-Pour une vidéo au même endroit dans le texte (au lieu d'une image), utilise du HTML directement :
+### Vidéo YouTube (ou Vimeo, etc.) en plein milieu du texte
+Une vidéo YouTube n'est pas un fichier vidéo direct, donc `<video>` ne marche pas pour ça —
+utilise une `<iframe>` avec le lien "embed" de YouTube (Partager > Intégrer, ou remplace juste
+`watch?v=` par `embed/` dans l'URL) :
 
 ```markdown
 description_fr: >
   Texte avant la vidéo.
 
-  <video src="/assets/projects/nelli-demo.mp4" controls class="float-right"></video>
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID" class="float-right" allowfullscreen></iframe>
 
-  Le texte continue autour de la vidéo.
+  Le texte continue autour.
+```
+Même chose, `.float-left` ou pas de classe pour l'afficher pleine largeur.
+
+## Liens (hyperliens) dans le texte
+Un lien normal vers n'importe quelle URL marche directement en Markdown, pas besoin de balise
+spéciale :
+```markdown
+description_fr: >
+  Le moteur physique est développé avec [Box2D](https://box2d.org/), en complément d'Unity.
+```
+Ça donne un vrai lien cliquable (rose, souligné) — exactement le même style que les liens vers
+la galerie (`#gallery-2`), simplement vers une adresse externe au lieu d'une image du site.
+
+## Titres et sous-titres dans le texte (comme sur Discord, avec #)
+Pareil que sur Discord, le `#` en début de ligne fait un titre — la taille dépend du nombre de `#` :
+
+| Discord | Ici | Rendu |
+|---|---|---|
+| `# Titre` | `# Titre` | Gros titre |
+| `## Titre` | `## Titre` | Titre moyen |
+| `### Titre` | `### Titre` | Petit titre |
+| — | `#### Titre` | Encore plus petit, en majuscules (en plus des 3 niveaux de Discord) |
+
+```markdown
+description_fr: >
+  ## Contexte du projet
+
+  Un paragraphe qui explique le contexte.
+
+  ### Mon rôle
+
+  Un autre paragraphe.
 ```
 
-Mets tes fichiers médias dans `assets/projects/` (crée le dossier s'il n'existe pas), puis
-référence-les avec un chemin qui commence par `/assets/projects/...`.
+## Gras, italique, etc. (comme sur Discord) — ce qui marche et ce qui diffère
+Le Markdown standard (utilisé ici) et le format de Discord se ressemblent mais ne sont pas
+identiques :
+
+| Effet | Syntaxe | Marche ici ? |
+|---|---|---|
+| **Gras** | `**texte**` ou `__texte__` | Oui, les deux |
+| *Italique* | `*texte*` ou `_texte_` | Oui, les deux |
+| ~~Barré~~ | `~~texte~~` | Oui |
+| Souligné | — | **Non en Markdown standard** |
+
+Piège à connaître : sur Discord, `__texte__` fait du **souligné**. Ici (Markdown classique),
+`__texte__` fait du **gras** — comme `**texte**`. Il n'existe pas de syntaxe Markdown pour le
+soulignement ; si tu en as vraiment besoin, écris directement `<u>texte</u>` dans la description,
+ça marche aussi (HTML brut autorisé dans les champs `description_fr`/`description_en`).
 
 ## Résumé (carte) vs description (page dédiée) — deux textes différents
 `summary_fr`/`summary_en` et `description_fr`/`description_en` sont deux champs séparés, pense

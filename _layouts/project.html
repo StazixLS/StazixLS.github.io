@@ -49,7 +49,7 @@ layout: default
     <div lang="en" hidden>{{ page.description_en | default: page.description_fr | markdownify }}</div>
   </div>
 
-  {% if page.gallery %}
+  {% if page.gallery.size > 0 %}
   <p class="pane-label">gallery</p>
   <div class="project-gallery">
     {% for item in page.gallery %}
