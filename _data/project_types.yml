@@ -1,0 +1,16 @@
+pro:
+  fr: "Projet professionnel"
+  en: "Professional project"
+  color: rose
+student:
+  fr: "Projet étudiant"
+  en: "Student project"
+  color: foam
+personal:
+  fr: "Projet personnel"
+  en: "Personal project"
+  color: gold
+gamejam:
+  fr: "Game Jam"
+  en: "Game Jam"
+  color: iris

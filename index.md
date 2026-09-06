@@ -37,7 +37,7 @@ title: Accueil
   </h2>
 
   <div class="grid">
-    {% assign sorted_projects = site.projects | sort: "order" %}
+    {% assign sorted_projects = site.projects | sort: "start_date" | reverse %}
     {% for project in sorted_projects %}
     <article class="card">
       {% if project.image and project.image != "" %}
@@ -56,10 +56,29 @@ title: Accueil
 
       <div class="card-body">
         <p class="card-meta">// project_{{ forloop.index }}</p>
+        {% if project.project_type and project.project_type != "" %}
+        {% assign ptype = site.data.project_types[project.project_type] %}
+        <span class="project-type project-type-{{ ptype.color }}">
+          <span lang="fr">{{ ptype.fr }}</span>
+          <span lang="en" hidden>{{ ptype.en }}</span>
+        </span>
+        {% endif %}
         <h3 class="card-title">
           <span lang="fr">{{ project.title_fr }}</span>
           <span lang="en" hidden>{{ project.title_en | default: project.title_fr }}</span>
         </h3>
+        {% if project.start_date and project.start_date != "" %}
+        <p class="card-dates">
+          <span lang="fr">{% include date-range.html start=project.start_date end=project.end_date lang="fr" %}</span>
+          <span lang="en" hidden>{% include date-range.html start=project.start_date end=project.end_date lang="en" %}</span>
+        </p>
+        {% endif %}
+        {% if project.secondary_end_date and project.secondary_end_date != "" %}
+        <p class="card-dates card-dates-secondary">
+          <span lang="fr">↳ {{ project.secondary_label_fr }} — jusqu'en {% include format-month.html date=project.secondary_end_date lang="fr" %}</span>
+          <span lang="en" hidden>↳ {{ project.secondary_label_en | default: project.secondary_label_fr }} — until {% include format-month.html date=project.secondary_end_date lang="en" %}</span>
+        </p>
+        {% endif %}
         <p class="card-subtitle">
           <span lang="fr">{{ project.subtitle_fr }}</span>
           <span lang="en" hidden>{{ project.subtitle_en | default: project.subtitle_fr }}</span>

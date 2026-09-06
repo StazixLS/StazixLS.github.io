@@ -1,5 +1,7 @@
 ---
-order: 1
+start_date: ""
+end_date: ""
+project_type: "pro"
 title_fr: "Projet La Poste"
 title_en: "La Poste Project"
 subtitle_fr: "Serious game VR — formation & sensibilisation"

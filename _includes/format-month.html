@@ -1,0 +1,5 @@
+{%- assign parts = include.date | split: "-" -%}
+{%- assign year = parts[0] -%}
+{%- assign month_num = parts[1] | plus: 0 -%}
+{%- assign month_name = site.data.months[include.lang][month_num | minus: 1] -%}
+{{ month_name }} {{ year }}

@@ -23,7 +23,18 @@ rien changer à ta config ni passer par un hébergement externe. Le site reste �
 `https://ton-pseudo.github.io`.
 
 ## Structure d'un projet (`_projects/*.md`)
-- `order`: nombre pour l'ordre d'affichage (1, 2, 3...)
+- `start_date` / `end_date`: format `"YYYY-MM"` (ex: `"2024-09"`). Les projets sont triés
+  automatiquement du plus récent au plus ancien sur `start_date` — plus besoin de gérer un ordre
+  à la main. Laisse `end_date: ""` si le projet est toujours en cours, ça affichera "présent"
+- `secondary_end_date` / `secondary_label_fr` / `secondary_label_en` : optionnel, pour le cas
+  d'un projet dont la version officielle est terminée mais que tu as continué à faire évoluer
+  de ton côté (ex: un projet étudiant rendu en juillet 2025, avec des correctifs personnels
+  poussés jusqu'en août 2026). Affiche une deuxième ligne sous la date principale, du style
+  « ↳ Maintenance & améliorations personnelles — jusqu'en août 2026 ». Laisse
+  `secondary_end_date: ""` si ça ne s'applique pas
+- `project_type`: un des 4 types définis dans `_data/project_types.yml` — `pro`, `student`,
+  `personal`, ou `gamejam`. Affiché en badge coloré sur la carte et la page dédiée. Pour ajouter
+  un 5ème type, il suffit d'ajouter une entrée dans ce fichier data, pas besoin de toucher au code
 - `title_fr` / `title_en`, `subtitle_fr` / `subtitle_en`
 - `summary_fr` / `summary_en`: UNE phrase courte, affichée sur la carte de la page d'accueil
 - `description_fr` / `description_en`: le texte complet, affiché sur la page dédiée du projet
@@ -36,13 +47,33 @@ rien changer à ta config ni passer par un hébergement externe. Le site reste �
   (pas sur la carte d'accueil — trop petit pour bien les montrer)
 
 ## Ajouter un nouveau projet
-Duplique un fichier dans `_projects/`, donne-lui un nom de fichier différent (ex: `mon-jeu.md`) et
-un `order` différent. Il apparaît automatiquement dans la grille et obtient sa propre page.
+Duplique un fichier dans `_projects/`, donne-lui un nom de fichier différent (ex: `mon-jeu.md`).
+Il apparaît automatiquement dans la grille (à la bonne place selon sa date) et obtient sa propre page.
 
 ## Photo de profil
 Dans `_config.yml`, remplis `avatar` avec le chemin vers ta photo (ex: `/assets/avatar.jpg`).
 Mets le fichier dans `assets/`. Laisse `avatar: ""` si tu ne veux pas de photo — la section About
 s'affiche normalement sans.
+
+## Vidéo YouTube / Vimeo qui ne s'affiche pas
+Si une `<iframe>` (ou une balise HTML un peu spéciale) ne s'affiche pas correctement dans
+`description_fr`/`description_en`, c'est que kramdown (le moteur Markdown) ne reconnaît pas
+toujours certaines balises HTML placées au milieu d'un texte. Solution fiable : entoure-la avec
+`{::nomarkdown}` / `{:/nomarkdown}`, qui force un passage brut sans interprétation :
+
+```markdown
+description_fr: >
+  Texte avant.
+
+  {::nomarkdown}
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID" class="float-right" allowfullscreen></iframe>
+  {:/nomarkdown}
+
+  Texte après.
+```
+
+Si une vidéo locale (`<video>`) ou une image avec `{: .float-right }` ne s'affiche pas non plus,
+le même enrobage `{::nomarkdown}` / `{:/nomarkdown}` résout le problème.
 
 ## Placer une image ou vidéo précisément dans le texte
 Dans `description_fr` / `description_en`, tu écris du Markdown normal. Pour insérer une image ou
