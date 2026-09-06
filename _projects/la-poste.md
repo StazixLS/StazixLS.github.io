@@ -1,6 +1,6 @@
 ---
-start_date: ""
-end_date: ""
+start_date: "2026-01"
+end_date: "2026-03"
 project_type: "pro"
 title_fr: "Projet La Poste"
 title_en: "La Poste Project"
