@@ -13,7 +13,7 @@ video: ""
 video_embed: ""
 gallery: []
 description_fr: >
-  UI / Corrections Bugs / ![COVER](/assets/projects/Nelli The Seer/Cover.png){: .float-right }
+  UI / Corrections Bugs / <iframe src="https://www.youtube.com/embed/vjoIUP63a10" class="float-right" allowfullscreen></iframe>
 description_en: >
-  UI / Bugs Fix / ![COVER](/assets/projects/Nelli The Seer/Cover.png){: .float-right }
+  UI / Bugs Fix / <iframe src="https://www.youtube.com/embed/vjoIUP63a10" class="float-right" allowfullscreen></iframe>
 ---
