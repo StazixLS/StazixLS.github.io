@@ -8,7 +8,7 @@ subtitle_fr: "Projet Perso — Jeu Multijoueur"
 subtitle_en: "Personal Project — Multiplayer Game"
 summary_fr: "all game"
 summary_en: "all game"
-tags: ["UE5", "C++", "Multiplayer", "Solo"]
+tags: ["UE5", "C++", "Multiplayer"]
 link: ""
 image: "/assets/projects/OProtocol/SplashScreen.png"
 video: ""
