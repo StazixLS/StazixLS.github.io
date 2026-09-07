@@ -49,6 +49,31 @@ Dans `_config.yml`, remplis `avatar` avec le chemin vers ta photo (ex: `/assets/
 Mets le fichier dans `assets/`. Laisse `avatar: ""` si tu ne veux pas de photo — la section About
 s'affiche normalement sans.
 
+## Comparaison avant / après (2 images côte à côte)
+Pour montrer une évolution (ex: version greybox vs version finale), utilise ce petit bloc HTML
+directement dans `description_fr`/`description_en` :
+
+```markdown
+description_fr: >
+  Texte avant.
+
+  <div class="media-compare">
+    <figure>
+      <img src="/assets/projects/nelli-the-seer/pause-greybox.jpg" alt="Version greybox">
+      <figcaption>Avril 2025 — greybox</figcaption>
+    </figure>
+    <figure>
+      <img src="/assets/projects/nelli-the-seer/pause-final.jpg" alt="Version finale">
+      <figcaption>Juillet 2025 — version finale</figcaption>
+    </figure>
+  </div>
+
+  Texte après.
+```
+
+Les deux images s'affichent côte à côte (l'une sous l'autre sur mobile), avec la légende de ton
+choix sous chacune.
+
 ## Vidéo YouTube / Vimeo qui ne s'affiche pas
 Si une `<iframe>` (ou une balise HTML un peu spéciale) ne s'affiche pas correctement dans
 `description_fr`/`description_en`, c'est que kramdown (le moteur Markdown) ne reconnaît pas

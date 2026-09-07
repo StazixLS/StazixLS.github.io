@@ -1,0 +1,50 @@
+---
+layout: default
+title: 404
+permalink: /404.html
+---
+<div class="pane">
+  <p class="pane-label">404.html</p>
+  <h1 class="project-title">
+    <span lang="fr">Erreur de compilation</span>
+    <span lang="en" hidden>Build Error</span>
+  </h1>
+
+  <div class="output-panel">
+    <div class="output-bar">
+      <span class="output-title">Output</span>
+      <span class="output-scope">
+        <span lang="fr">Afficher la sortie de : Build</span>
+        <span lang="en" hidden>Show output from: Build</span>
+      </span>
+    </div>
+    <div class="output-body">
+      <p class="oline">1&gt;------ Build started: Project: Page, Configuration: Release Any CPU ------</p>
+      <p class="oline oline-error">
+        <span lang="fr">1&gt;  Error CS0103 : cette page n'existe pas dans le contexte actuel</span>
+        <span lang="en" hidden>1&gt;  Error CS0103: this page does not exist in the current context</span>
+      </p>
+      <p class="oline oline-error">
+        <span lang="fr">1&gt;  Error 404 : fichier introuvable</span>
+        <span lang="en" hidden>1&gt;  Error 404: file not found</span>
+      </p>
+      <p class="oline oline-summary-fail">========== Build: 0 succeeded, 1 failed ==========</p>
+    </div>
+  </div>
+
+  <!--
+  Pour ajouter le gif de Nelli qui court : dépose le fichier à /assets/nelli-404.gif
+  puis décommente les 4 lignes ci-dessous.
+
+  <img src="/assets/nelli-404.gif" alt="Nelli qui court" class="error-gif">
+  <p class="error-gif-caption">
+    <span lang="fr">Nelli te cherche aussi, apparemment</span>
+    <span lang="en" hidden>Nelli is looking for you too, apparently</span>
+  </p>
+  -->
+
+  <a href="{{ '/' | relative_url }}" class="btn btn-fill" style="margin-top: 24px; display: inline-block;">
+    <span lang="fr">→ recompiler vers l'accueil</span>
+    <span lang="en" hidden>→ rebuild to homepage</span>
+  </a>
+</div>
