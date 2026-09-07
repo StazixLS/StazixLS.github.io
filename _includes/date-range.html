@@ -12,9 +12,9 @@
   {%- assign end_text = emonth_name | append: " " | append: eyear -%}
 {%- else -%}
   {%- if include.lang == "fr" -%}
-    {%- assign end_text = "présent" -%}
+    {%- assign end_text = "Présent" -%}
   {%- else -%}
-    {%- assign end_text = "present" -%}
+    {%- assign end_text = "Present" -%}
   {%- endif -%}
 {%- endif -%}
 {{ month_name }} {{ year }} — {{ end_text }}
