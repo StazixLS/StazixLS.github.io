@@ -14,10 +14,10 @@ image: "/assets/projects/OProtocol/SplashScreen.png"
 video: ""
 video_embed: ""
 gallery: []
+locked: true
 description_fr: |
   all game
 
 description_en: |
   all game
-
 ---
