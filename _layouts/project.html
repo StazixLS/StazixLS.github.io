@@ -7,6 +7,7 @@ layout: default
     <span lang="en" hidden>← back to projects</span>
   </a>
 
+  {% unless page.locked %}
   {% if page.image and page.image != "" %}
   <div class="project-hero-media">
     <img src="{{ page.image | relative_url }}" alt="{{ page.title_fr }}">
@@ -20,6 +21,7 @@ layout: default
     <iframe src="{{ page.video_embed }}" title="{{ page.title_fr }}" loading="lazy" allowfullscreen></iframe>
   </div>
   {% endif %}
+  {% endunless %}
 
   <p class="pane-label">project.md</p>
   {% if page.project_type and page.project_type != "" %}
@@ -50,6 +52,15 @@ layout: default
   </div>
   {% endif %}
 
+  {% if page.locked %}
+  <div class="locked-notice">
+    <p>
+      <span lang="fr">🔒 Ce projet est encore en cours de développement — les détails ne sont pas encore publics.</span>
+      <span lang="en" hidden>🔒 This project is still in development — details aren't public yet.</span>
+    </p>
+  </div>
+  {% else %}
+
   {% if page.link and page.link != "" %}
   <a class="card-link" href="{{ page.link }}" target="_blank" rel="noopener">
     <span lang="fr">↗ voir le projet en ligne</span>
@@ -79,6 +90,7 @@ layout: default
       {% endif %}
     {% endfor %}
   </div>
+  {% endif %}
   {% endif %}
 
   <a href="{{ '/' | relative_url }}#projets" class="back-link back-link-bottom">

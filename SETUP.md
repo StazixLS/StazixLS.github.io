@@ -15,6 +15,24 @@ bundle exec jekyll serve
 
 Puis ouvre http://localhost:4000
 
+## Montrer le site hors-ligne (job dating, salon...)
+Le site marche sans connexion internet, polices comprises (elles sont en local dans
+`assets/fonts/`, plus de dépendance à Google Fonts).
+
+Avant l'événement (avec internet) :
+```bash
+bundle install
+bundle exec jekyll build
+```
+Ça crée un dossier `_site/` avec le site complet, prêt à l'emploi.
+
+Le jour J (sans internet) :
+```bash
+bundle exec jekyll serve --skip-initial-build
+```
+ou plus simple : ouvre directement `_site/index.html` dans un navigateur (double-clic), aucune
+commande nécessaire. Les deux marchent sans wifi.
+
 ## Ça reste 100% GitHub Pages
 Chaque projet a maintenant sa propre page (`/projects/nom-du-projet/`), générée automatiquement
 à partir des fichiers dans `_projects/`. C'est une fonctionnalité native de Jekyll (les "collections"),
@@ -39,6 +57,11 @@ rien changer à ta config ni passer par un hébergement externe. Le site reste �
   la page dédiée. Ne remplis qu'un seul des trois
 - `gallery`: liste d'images/vidéos supplémentaires, affichées en bas de la page dédiée du projet
   (pas sur la carte d'accueil — trop petit pour bien les montrer)
+- `locked`: mets `true` pour un projet encore en cours que tu ne veux pas détailler publiquement.
+  La carte reste visible (titre, tags, dates, résumé) mais le lien "en savoir plus" est remplacé
+  par "🔒 Bientôt disponible". La page dédiée existe toujours si quelqu'un devine/tape l'URL, mais
+  n'affiche qu'un message générique — jamais le vrai contenu (image, description, galerie).
+  Laisse `locked: false` (ou retire le champ) pour le rendre public normalement
 
 ## Ajouter un nouveau projet
 Duplique un fichier dans `_projects/`, donne-lui un nom de fichier différent (ex: `mon-jeu.md`).

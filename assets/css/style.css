@@ -14,6 +14,8 @@
   --foam-soft: rgba(156, 207, 216, 0.12);
   --iris: #c4a7e7;
   --iris-soft: rgba(196, 167, 231, 0.12);
+  --pine: #6e94a3;
+  --pine-soft: rgba(110, 148, 163, 0.14);
 
   --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
   --font-body: 'Sora', system-ui, sans-serif;
@@ -235,13 +237,16 @@ a { color: inherit; text-decoration: none; }
   background: var(--rose-soft);
   color: var(--rose);
 }
-.tag:nth-child(3n+2) { background: var(--gold-soft); color: var(--gold); }
-.tag:nth-child(3n+3) { background: var(--foam-soft); color: var(--foam); }
+.tag:nth-child(5n+2) { background: var(--gold-soft); color: var(--gold); }
+.tag:nth-child(5n+3) { background: var(--foam-soft); color: var(--foam); }
+.tag:nth-child(5n+4) { background: var(--iris-soft); color: var(--iris); }
+.tag:nth-child(5n+5) { background: var(--pine-soft); color: var(--pine); }
 
 .card-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .card-link { font-family: var(--font-mono); font-size: 13px; color: var(--rose); }
 .card-link:hover { text-decoration: underline; }
 .card-link-ext { color: var(--foam); }
+.card-locked { font-family: var(--font-mono); font-size: 13px; color: var(--muted); }
 
 .card-empty {
   display: flex;
@@ -314,6 +319,17 @@ a { color: inherit; text-decoration: none; }
 }
 .project-dates { font-family: var(--font-mono); font-size: 13px; color: var(--muted); margin: 0 0 14px; }
 .project-subtitle { color: var(--foam); font-size: 15px; margin: 0 0 20px; }
+
+.locked-notice {
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  padding: 28px;
+  margin-top: 24px;
+  text-align: center;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
 
 .project-body { margin-top: 32px; }
 .project-body::after { content: ""; display: table; clear: both; }

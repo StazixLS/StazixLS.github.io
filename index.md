@@ -87,10 +87,17 @@ title: Accueil
         </div>
         {% endif %}
         <div class="card-actions">
+          {% if project.locked %}
+          <span class="card-locked">
+            <span lang="fr">🔒 Bientôt disponible</span>
+            <span lang="en" hidden>🔒 Coming soon</span>
+          </span>
+          {% else %}
           <a class="card-link" href="{{ project.url | relative_url }}">
             <span lang="fr">→ en savoir plus</span>
             <span lang="en" hidden>→ learn more</span>
           </a>
+          {% endif %}
           {% if project.link and project.link != "" %}
           <a class="card-link card-link-ext" href="{{ project.link }}" target="_blank" rel="noopener">
             <span lang="fr">↗ voir en ligne</span>
