@@ -9,15 +9,15 @@ layout: default
 
   {% unless page.locked %}
   {% if page.image and page.image != "" %}
-  <div class="project-hero-media">
+  <div class="project-hero-media reveal">
     <img src="{{ page.image | relative_url }}" alt="{{ page.title_fr }}">
   </div>
   {% elsif page.video and page.video != "" %}
-  <div class="project-hero-media">
+  <div class="project-hero-media reveal">
     <video src="{{ page.video | relative_url }}" controls preload="metadata"></video>
   </div>
   {% elsif page.video_embed and page.video_embed != "" %}
-  <div class="project-hero-media project-hero-media-embed">
+  <div class="project-hero-media project-hero-media-embed reveal">
     <iframe src="{{ page.video_embed }}" title="{{ page.title_fr }}" loading="lazy" allowfullscreen></iframe>
   </div>
   {% endif %}
@@ -68,7 +68,7 @@ layout: default
   </a>
   {% endif %}
 
-  <div class="project-body">
+  <div class="project-body reveal">
     <div lang="fr">{{ page.description_fr | markdownify }}</div>
     <div lang="en" hidden>{{ page.description_en | default: page.description_fr | markdownify }}</div>
   </div>
@@ -78,12 +78,12 @@ layout: default
   <div class="project-gallery">
     {% for item in page.gallery %}
       {% if item contains ".mp4" or item contains ".webm" or item contains ".mov" %}
-      <div id="gallery-{{ forloop.index }}" class="gallery-item">
+      <div id="gallery-{{ forloop.index }}" class="gallery-item reveal">
         <video src="{{ item | relative_url }}" controls preload="none"></video>
         <span class="gallery-index">#{{ forloop.index }}</span>
       </div>
       {% else %}
-      <a id="gallery-{{ forloop.index }}" class="gallery-item" href="{{ item | relative_url }}" target="_blank" rel="noopener">
+      <a id="gallery-{{ forloop.index }}" class="gallery-item reveal" href="{{ item | relative_url }}" target="_blank" rel="noopener">
         <img src="{{ item | relative_url }}" alt="" loading="lazy">
         <span class="gallery-index">#{{ forloop.index }}</span>
       </a>
