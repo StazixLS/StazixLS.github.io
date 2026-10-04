@@ -3,7 +3,7 @@ layout: default
 ---
 {% assign vt_slug = page.title_fr | slugify %}
 <article class="project-page">
-  <a href="{{ '/' | relative_url }}#projets" class="back-link">
+  <a href="{{ '/' | relative_url }}#project-{{ vt_slug }}" class="back-link">
     <span lang="fr">← retour aux projets</span>
     <span lang="en" hidden>← back to projects</span>
   </a>
@@ -94,7 +94,7 @@ layout: default
   {% endif %}
   {% endif %}
 
-  <a href="{{ '/' | relative_url }}#projets" class="back-link back-link-bottom">
+  <a href="{{ '/' | relative_url }}#project-{{ vt_slug }}" class="back-link back-link-bottom">
     <span lang="fr">← retour aux projets</span>
     <span lang="en" hidden>← back to projects</span>
   </a>

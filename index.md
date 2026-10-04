@@ -40,7 +40,7 @@ title: Accueil
     {% assign sorted_projects = site.projects | sort: "start_date" | reverse %}
     {% for project in sorted_projects %}
     {% assign vt_slug = project.title_fr | slugify %}
-    <article class="card reveal">
+    <article class="card reveal" id="project-{{ vt_slug }}">
       {% if project.image and project.image != "" %}
       <div class="card-media" style="view-transition-name: card-media-{{ vt_slug }};">
         <img src="{{ project.image | relative_url }}" alt="{{ project.title_fr }}" loading="lazy">

@@ -238,6 +238,7 @@ a { color: inherit; text-decoration: none; }
   padding: 0;
   overflow: hidden;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, opacity 0.5s ease;
+  scroll-margin-top: 32px;
 }
 .card:hover { border-color: var(--rose); transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35); }
 
