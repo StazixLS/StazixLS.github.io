@@ -133,22 +133,49 @@ title: Accueil
   </h2>
 
   <div class="profile-body reveal">
-    <p class="profile-text">
-      <span lang="fr">Je m'appelle Sev. Ce qui m'a attiré vers le développement de jeux vidéo, c'est cette idée qu'une poignée de lignes de code peut devenir une expérience que quelqu'un d'autre va ressentir, manette en main. Je suis plutôt branché gameplay et outils : concevoir des systèmes qui tiennent la route, et construire ce qui permet à toute une équipe d'avancer plus vite.</span>
-      <span lang="en" hidden>My name is Sev. What drew me to game development is the idea that a handful of lines of code can become an experience someone else actually feels, controller in hand. I lean toward gameplay and tools: designing systems that hold up, and building the things that let a whole team move faster.</span>
-    </p>
-    <p class="profile-text">
-      <span lang="fr">Nelli the Seer et La Poste m'ont surtout appris à travailler en équipe sur un vrai projet : versionner proprement avec Perforce et Git, documenter ce que je fais, et accepter qu'un outil n'a de valeur que si les autres s'en servent vraiment.</span>
-      <span lang="en" hidden>Nelli the Seer and La Poste mostly taught me how to work as part of a real team: versioning cleanly with Perforce and Git, documenting what I build, and accepting that a tool only has value if people actually use it.</span>
-    </p>
-    <p class="profile-highlight-label">
-      <span lang="fr">ce que j'aimerais faire</span>
-      <span lang="en" hidden>what I'd like to do</span>
-    </p>
-    <p class="profile-text profile-highlight">
-      <span lang="fr">La suite, j'aimerais la construire comme programmeur gameplay / outils dans un studio, continuer à apprendre au contact d'autres développeurs, et creuser des sujets qui m'intéressent comme la réalité virtuelle et l'intégration de l'IA dans les outils de production.</span>
-      <span lang="en" hidden>Looking ahead, I'd like to keep building as a gameplay/tools programmer in a studio, keep learning alongside other developers, and dig deeper into things that interest me, like virtual reality and bringing AI into production tooling.</span>
-    </p>
+    <div class="profile-block">
+      <p class="profile-label">
+        <span lang="fr">qui je suis</span>
+        <span lang="en" hidden>who I am</span>
+      </p>
+      <p class="profile-text">
+        <span lang="fr">Je m'appelle Sev. Ce qui m'a attiré vers le développement de jeux vidéo, c'est cette idée qu'une poignée de lignes de code peut devenir une expérience que quelqu'un d'autre va ressentir, manette en main. Je suis plutôt branché gameplay et outils : concevoir des systèmes qui tiennent la route, et construire ce qui permet à toute une équipe d'avancer plus vite.</span>
+        <span lang="en" hidden>My name is Sev. What drew me to game development is the idea that a handful of lines of code can become an experience someone else actually feels, controller in hand. I lean toward gameplay and tools: designing systems that hold up, and building the things that let a whole team move faster.</span>
+      </p>
+    </div>
+
+    <div class="profile-block">
+      <p class="profile-label">
+        <span lang="fr">mes débuts</span>
+        <span lang="en" hidden>how it started</span>
+      </p>
+      <p class="profile-text">
+        <span lang="fr">Avant de me lancer dans le développement de jeux vidéo, j'ai commencé par bidouiller des command blocks dans Minecraft, puis des datapacks. C'est là que j'ai pris goût à comprendre comment un système fonctionne sous le capot et à vouloir le refaire moi-même — l'étape d'après s'est imposée naturellement : si j'aimais déjà bricoler des mécaniques dans un jeu, autant apprendre à en faire un vrai.</span>
+        <span lang="en" hidden>Before getting into game development, I started out tinkering with command blocks in Minecraft, then datapacks. That's where I got a taste for understanding how a system works under the hood and wanting to rebuild it myself — the next step came naturally: if I already enjoyed tinkering with mechanics inside a game, I might as well learn to make one for real.</span>
+      </p>
+    </div>
+
+    <div class="profile-block">
+      <p class="profile-label">
+        <span lang="fr">mon parcours</span>
+        <span lang="en" hidden>what I learned</span>
+      </p>
+      <p class="profile-text">
+        <span lang="fr">Nelli the Seer et La Poste m'ont surtout appris à travailler en équipe sur un vrai projet : versionner proprement avec Perforce et Git, documenter ce que je fais, et accepter qu'un outil n'a de valeur que si les autres s'en servent vraiment.</span>
+        <span lang="en" hidden>Nelli the Seer and La Poste mostly taught me how to work as part of a real team: versioning cleanly with Perforce and Git, documenting what I build, and accepting that a tool only has value if people actually use it.</span>
+      </p>
+    </div>
+
+    <div class="profile-block profile-block-highlight">
+      <p class="profile-label">
+        <span lang="fr">ce que j'aimerais faire</span>
+        <span lang="en" hidden>what I'd like to do</span>
+      </p>
+      <p class="profile-text">
+        <span lang="fr">La suite, j'aimerais la construire comme programmeur gameplay / outils dans un studio, continuer à apprendre au contact d'autres développeurs, et creuser des sujets qui m'intéressent comme la réalité virtuelle et l'intégration de l'IA dans les outils de production.</span>
+        <span lang="en" hidden>Looking ahead, I'd like to keep building as a gameplay/tools programmer in a studio, keep learning alongside other developers, and dig deeper into things that interest me, like virtual reality and bringing AI into production tooling.</span>
+      </p>
+    </div>
   </div>
 </section>
 
