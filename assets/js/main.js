@@ -25,15 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (revealTargets.length) {
     if ('IntersectionObserver' in window) {
       const revealObserver = new IntersectionObserver(
-        (entries, obs) => {
+        (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('in-view');
-              obs.unobserve(entry.target);
-            }
+            entry.target.classList.toggle('in-view', entry.isIntersecting);
           });
         },
-        { threshold: 0.15, rootMargin: '0px 0px -8% 0px' }
+        { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }
       );
       revealTargets.forEach((el) => revealObserver.observe(el));
     } else {

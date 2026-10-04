@@ -3,7 +3,7 @@ layout: default
 title: Accueil
 ---
 
-<section id="profil" class="pane">
+<section id="about" class="pane">
   <p class="pane-label">About.cs</p>
   {% if site.avatar and site.avatar != "" %}
   <img src="{{ site.avatar | relative_url }}" alt="{{ site.author }}" class="hero-avatar">
@@ -14,16 +14,8 @@ title: Accueil
     <span lang="en" hidden>&gt; Gameplay / AI / Tools Programmer</span>
   </p>
   <p class="hero-bio">
-    <span lang="fr">Je m'appelle Sev, et je fais du jeu vidéo parce que j'aime voir une idée abstraite devenir quelque chose qu'on peut toucher, manette en main. Je code en C++, C# et Python, je navigue entre Unity, Unreal Engine et WPF selon les projets, et ce qui me passionne le plus, c'est le gameplay et les outils — concevoir des systèmes qui tiennent la route, et construire ce qui permet à toute une équipe d'avancer plus vite.</span>
-    <span lang="en" hidden>My name is Sev, and I make games because I like watching an abstract idea turn into something you can actually hold, controller in hand. I code in C++, C#, and Python, moving between Unity, Unreal Engine, and WPF depending on the project, and what I enjoy most is gameplay and tools — building systems that hold up, and building the things that let a whole team move faster.</span>
-  </p>
-  <p class="hero-goals-label">
-    <span lang="fr">ce que j'aimerais faire</span>
-    <span lang="en" hidden>what I'd like to do</span>
-  </p>
-  <p class="hero-bio hero-bio-goals">
-    <span lang="fr">Nelli the Seer et La Poste m'ont surtout appris à travailler en équipe sur un vrai projet : versionner proprement, documenter ce que je fais, et accepter qu'un outil n'a de valeur que si les autres s'en servent vraiment. La suite, j'aimerais la construire comme programmeur gameplay / outils dans un studio, continuer à apprendre au contact d'autres développeurs, et creuser des sujets qui m'intéressent comme la réalité virtuelle et l'intégration de l'IA dans les outils de production.</span>
-    <span lang="en" hidden>Nelli the Seer and La Poste mostly taught me how to work as part of a real team: versioning cleanly, documenting what I build, and accepting that a tool only has value if people actually use it. Looking ahead, I'd like to keep building as a gameplay/tools programmer in a studio, keep learning alongside other developers, and dig deeper into things that interest me, like virtual reality and bringing AI into production tooling.</span>
+    <span lang="fr">Développeur passionné par le jeu vidéo, je code en C++, C# et Python, et je navigue entre Unity, Unreal Engine et WPF selon les projets. J'aime particulièrement le gameplay et les outils qui simplifient le travail en équipe — transformer une idée en quelque chose de jouable, du prototype à la version finale.</span>
+    <span lang="en" hidden>I'm a game developer who codes in C++, C#, and Python, moving between Unity, Unreal Engine, and WPF depending on the project. I especially enjoy gameplay programming and building tools that make teamwork easier — turning an idea into something playable, from first prototype to final build.</span>
   </p>
   <div class="hero-actions">
     <a href="#projets" class="btn btn-fill">
@@ -130,6 +122,33 @@ title: Accueil
       </p>
     </article>
      -->
+  </div>
+</section>
+
+<section id="profile" class="pane">
+  <p class="pane-label">Profile.md</p>
+  <h2 class="pane-title">
+    <span lang="fr">Profil</span>
+    <span lang="en" hidden>Profile</span>
+  </h2>
+
+  <div class="profile-body reveal">
+    <p class="profile-text">
+      <span lang="fr">Je m'appelle Sev. Ce qui m'a attiré vers le développement de jeux vidéo, c'est cette idée qu'une poignée de lignes de code peut devenir une expérience que quelqu'un d'autre va ressentir, manette en main. Je suis plutôt branché gameplay et outils : concevoir des systèmes qui tiennent la route, et construire ce qui permet à toute une équipe d'avancer plus vite.</span>
+      <span lang="en" hidden>My name is Sev. What drew me to game development is the idea that a handful of lines of code can become an experience someone else actually feels, controller in hand. I lean toward gameplay and tools: designing systems that hold up, and building the things that let a whole team move faster.</span>
+    </p>
+    <p class="profile-text">
+      <span lang="fr">Nelli the Seer et La Poste m'ont surtout appris à travailler en équipe sur un vrai projet : versionner proprement avec Perforce et Git, documenter ce que je fais, et accepter qu'un outil n'a de valeur que si les autres s'en servent vraiment.</span>
+      <span lang="en" hidden>Nelli the Seer and La Poste mostly taught me how to work as part of a real team: versioning cleanly with Perforce and Git, documenting what I build, and accepting that a tool only has value if people actually use it.</span>
+    </p>
+    <p class="profile-highlight-label">
+      <span lang="fr">ce que j'aimerais faire</span>
+      <span lang="en" hidden>what I'd like to do</span>
+    </p>
+    <p class="profile-text profile-highlight">
+      <span lang="fr">La suite, j'aimerais la construire comme programmeur gameplay / outils dans un studio, continuer à apprendre au contact d'autres développeurs, et creuser des sujets qui m'intéressent comme la réalité virtuelle et l'intégration de l'IA dans les outils de production.</span>
+      <span lang="en" hidden>Looking ahead, I'd like to keep building as a gameplay/tools programmer in a studio, keep learning alongside other developers, and dig deeper into things that interest me, like virtual reality and bringing AI into production tooling.</span>
+    </p>
   </div>
 </section>
 
