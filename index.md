@@ -39,17 +39,18 @@ title: Accueil
   <div class="grid">
     {% assign sorted_projects = site.projects | sort: "start_date" | reverse %}
     {% for project in sorted_projects %}
+    {% assign vt_slug = project.title_fr | slugify %}
     <article class="card reveal">
       {% if project.image and project.image != "" %}
-      <div class="card-media">
+      <div class="card-media" style="view-transition-name: card-media-{{ vt_slug }};">
         <img src="{{ project.image | relative_url }}" alt="{{ project.title_fr }}" loading="lazy">
       </div>
       {% elsif project.video and project.video != "" %}
-      <div class="card-media">
+      <div class="card-media" style="view-transition-name: card-media-{{ vt_slug }};">
         <video src="{{ project.video | relative_url }}" controls preload="none"></video>
       </div>
       {% elsif project.video_embed and project.video_embed != "" %}
-      <div class="card-media card-media-embed">
+      <div class="card-media card-media-embed" style="view-transition-name: card-media-{{ vt_slug }};">
         <iframe src="{{ project.video_embed }}" title="{{ project.title_fr }}" loading="lazy" allowfullscreen></iframe>
       </div>
       {% endif %}
@@ -63,7 +64,7 @@ title: Accueil
           <span lang="en" hidden>{{ ptype.en }}</span>
         </span>
         {% endif %}
-        <h3 class="card-title">
+        <h3 class="card-title" style="view-transition-name: card-title-{{ vt_slug }};">
           <span lang="fr">{{ project.title_fr }}</span>
           <span lang="en" hidden>{{ project.title_en | default: project.title_fr }}</span>
         </h3>

@@ -24,6 +24,11 @@
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 
+/* Card -> project page shared-element transition (no-op in unsupported browsers) */
+@view-transition {
+  navigation: auto;
+}
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -554,6 +559,11 @@ a:focus-visible, .tab:focus-visible, .lang-btn:focus-visible { outline: 2px soli
   * { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
   .reveal { opacity: 1 !important; transform: none !important; }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
 }
 
 /* Responsive */

@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign vt_slug = page.title_fr | slugify %}
 <article class="project-page">
   <a href="{{ '/' | relative_url }}#projets" class="back-link">
     <span lang="fr">← retour aux projets</span>
@@ -9,15 +10,15 @@ layout: default
 
   {% unless page.locked %}
   {% if page.image and page.image != "" %}
-  <div class="project-hero-media reveal">
+  <div class="project-hero-media" style="view-transition-name: card-media-{{ vt_slug }};">
     <img src="{{ page.image | relative_url }}" alt="{{ page.title_fr }}">
   </div>
   {% elsif page.video and page.video != "" %}
-  <div class="project-hero-media reveal">
+  <div class="project-hero-media" style="view-transition-name: card-media-{{ vt_slug }};">
     <video src="{{ page.video | relative_url }}" controls preload="metadata"></video>
   </div>
   {% elsif page.video_embed and page.video_embed != "" %}
-  <div class="project-hero-media project-hero-media-embed reveal">
+  <div class="project-hero-media project-hero-media-embed" style="view-transition-name: card-media-{{ vt_slug }};">
     <iframe src="{{ page.video_embed }}" title="{{ page.title_fr }}" loading="lazy" allowfullscreen></iframe>
   </div>
   {% endif %}
@@ -31,7 +32,7 @@ layout: default
     <span lang="en" hidden>{{ ptype.en }}</span>
   </span>
   {% endif %}
-  <h1 class="project-title">
+  <h1 class="project-title" style="view-transition-name: card-title-{{ vt_slug }};">
     <span lang="fr">{{ page.title_fr }}</span>
     <span lang="en" hidden>{{ page.title_en | default: page.title_fr }}</span>
   </h1>
