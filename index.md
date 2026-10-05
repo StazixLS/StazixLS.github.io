@@ -14,8 +14,8 @@ title: Accueil
     <span lang="en" hidden>&gt; Gameplay / AI / Tools Programmer</span>
   </p>
   <p class="hero-bio">
-    <span lang="fr">Développeur passionné par le jeu vidéo, je code en C++, C# et Python, et je navigue entre Unity, Unreal Engine et WPF selon les projets. J'aime particulièrement le gameplay et les outils qui simplifient le travail en équipe — transformer une idée en quelque chose de jouable, du prototype à la version finale.</span>
-    <span lang="en" hidden>I'm a game developer who codes in C++, C#, and Python, moving between Unity, Unreal Engine, and WPF depending on the project. I especially enjoy gameplay programming and building tools that make teamwork easier — turning an idea into something playable, from first prototype to final build.</span>
+    <span lang="fr">Développeur passionné par le jeu vidéo, je code en C++, C# et Python, et je navigue entre Unity, Unreal Engine et WPF selon les projets. J'aime particulièrement le gameplay et les outils qui simplifient le travail en équipe : transformer une idée en quelque chose de jouable, du prototype à la version finale.</span>
+    <span lang="en" hidden>I'm a game developer who codes in C++, C#, and Python, moving between Unity, Unreal Engine, and WPF depending on the project. I especially enjoy gameplay programming and building tools that make teamwork easier: turning an idea into something playable, from first prototype to final build.</span>
   </p>
   <div class="hero-actions">
     <a href="#projets" class="btn btn-fill">
@@ -151,8 +151,8 @@ title: Accueil
         <span lang="en" hidden>how it started</span>
       </p>
       <p class="profile-text">
-        <span lang="fr">Avant de me lancer dans le développement de jeux vidéo, j'ai commencé par bidouiller des command blocks dans Minecraft, puis des datapacks. C'est là que j'ai pris goût à comprendre comment un système fonctionne sous le capot et à vouloir le refaire moi-même — l'étape d'après s'est imposée naturellement : si j'aimais déjà bricoler des mécaniques dans un jeu, autant apprendre à en faire un vrai.</span>
-        <span lang="en" hidden>Before getting into game development, I started out tinkering with command blocks in Minecraft, then datapacks. That's where I got a taste for understanding how a system works under the hood and wanting to rebuild it myself — the next step came naturally: if I already enjoyed tinkering with mechanics inside a game, I might as well learn to make one for real.</span>
+        <span lang="fr">Avant de me lancer dans le développement de jeux vidéo, j'ai commencé par bidouiller des command blocks dans Minecraft, puis des datapacks. C'est là que j'ai pris goût à comprendre comment un système fonctionne sous le capot, et à vouloir le refaire moi-même. La suite s'est imposée naturellement : si j'aimais déjà bricoler des mécaniques dans un jeu, autant apprendre à en faire un vrai.</span>
+        <span lang="en" hidden>Before getting into game development, I started out tinkering with command blocks in Minecraft, then datapacks. That's where I got a taste for understanding how a system works under the hood, and wanting to rebuild it myself. The next step came naturally: if I already enjoyed tinkering with mechanics inside a game, I might as well learn to make one for real.</span>
       </p>
     </div>
 

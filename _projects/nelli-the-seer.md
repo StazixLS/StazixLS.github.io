@@ -33,15 +33,15 @@ description_fr: |
 
   ## Ce dont je suis le plus fier
 
-  La transition du menu pause entre deux niveaux : j'ai éliminé le petit "pop" de l'écran de chargement entre deux changements de niveau — résultat fluide, sans accroc visible.
+  La transition du menu pause entre deux niveaux : j'ai éliminé le petit "pop" de l'écran de chargement entre deux changements de niveau, pour un résultat fluide et sans accroc visible.
 
   ## Après la sortie
 
-  Le travail ne s'est pas arrêté à la sortie Steam — j'ai continué à corriger des bugs bien après la fin officielle du projet : deux crashs majeurs, des correctifs côté 3C et GPE (des zones auxquelles je n'avais pas touché en production), et la réadaptation du système de rebind/détection clavier-manette après la migration vers UE 5.6.1.
+  Le travail ne s'est pas arrêté à la sortie Steam. J'ai continué à corriger des bugs bien après la fin officielle du projet : deux crashs majeurs, des correctifs côté 3C et GPE (des zones auxquelles je n'avais pas touché en production), et la réadaptation du système de rebind/détection clavier-manette après la migration vers UE 5.6.1.
 
   ## Ce que j'en ai retenu
 
-  Mon premier vrai projet avec Perforce (P4V) — donc mon premier vrai apprentissage du travail en versioning sur un gros projet d'équipe. Côté technique : mieux utiliser les Blueprints, et ne pas sur-architecturer — un système "trop réutilisable" peut surcharger un Blueprint pour un gain quasi nul.
+  Mon premier vrai projet avec Perforce (P4V), donc mon premier vrai apprentissage du travail en versioning sur un gros projet d'équipe. Côté technique : mieux utiliser les Blueprints, et ne pas sur-architecturer. Un système "trop réutilisable" peut surcharger un Blueprint pour un gain quasi nul.
 description_en: |
   Nelli The Seer is a student project from Objectif 3D: a third-person action-adventure blending platforming and memory-based puzzles, released for free on Steam on July 8, 2025 (89% positive reviews, 20,000+ downloads).
 
@@ -61,13 +61,13 @@ description_en: |
 
   ## What I'm most proud of
 
-  The pause menu transition between levels: I eliminated the small loading-screen "pop" that used to appear between level changes — the result is smooth, with no visible hitch.
+  The pause menu transition between levels: I eliminated the small loading-screen "pop" that used to appear between level changes, for a smooth result with no visible hitch.
 
   ## After launch
 
-  The work didn't stop at the Steam release — I kept fixing bugs well after the project's official end: two major crashes, fixes on the 3C and GPE side (areas I hadn't touched during production), and re-adapting the rebind/keyboard-gamepad detection system after the UE 5.6.1 migration.
+  The work didn't stop at the Steam release. I kept fixing bugs well after the project's official end: two major crashes, fixes on the 3C and GPE side (areas I hadn't touched during production), and re-adapting the rebind/keyboard-gamepad detection system after the UE 5.6.1 migration.
 
   ## What I took away from it
 
-  My first real project using Perforce (P4V) — so my first real experience with version control on a large team project. On the technical side: using Blueprints more effectively, and not over-architecting — a system that's "too reusable" can overload a Blueprint for almost no gain.
+  My first real project using Perforce (P4V), so my first real experience with version control on a large team project. On the technical side: using Blueprints more effectively, and not over-architecting. A system that's "too reusable" can overload a Blueprint for almost no gain.
 ---
