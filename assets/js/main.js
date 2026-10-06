@@ -24,13 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const revealTargets = document.querySelectorAll('.reveal');
   if (revealTargets.length) {
     if ('IntersectionObserver' in window) {
+      // Reveal as soon as an element is 15% visible, but only hide it again
+      // once it has fully left the viewport. A single threshold used to hide
+      // elements the moment they dipped below ~15% visible — which could
+      // still be most of the element on screen — leaving a gap where content
+      // the user was still looking at had faded out.
       const revealObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            entry.target.classList.toggle('in-view', entry.isIntersecting);
+            if (entry.intersectionRatio >= 0.15) {
+              entry.target.classList.add('in-view');
+            } else if (entry.intersectionRatio <= 0) {
+              entry.target.classList.remove('in-view');
+            }
+            // Between 0 and 0.15: leave the current state alone (hysteresis).
           });
         },
-        { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }
+        { threshold: [0, 0.15] }
       );
       revealTargets.forEach((el) => revealObserver.observe(el));
     } else {

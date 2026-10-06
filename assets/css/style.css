@@ -541,6 +541,11 @@ a { color: inherit; text-decoration: none; }
 .project-gallery .gallery-item.reveal.in-view:nth-child(5) { animation-delay: 0.32s; }
 .project-gallery .gallery-item.reveal.in-view:nth-child(6) { animation-delay: 0.4s; }
 
+.profile-body .profile-block.reveal.in-view:nth-child(1) { animation-delay: 0s; }
+.profile-body .profile-block.reveal.in-view:nth-child(2) { animation-delay: 0.1s; }
+.profile-body .profile-block.reveal.in-view:nth-child(3) { animation-delay: 0.2s; }
+.profile-body .profile-block.reveal.in-view:nth-child(4) { animation-delay: 0.3s; }
+
 .output-panel.reveal .oline {
   opacity: 0;
   transform: translateY(10px);

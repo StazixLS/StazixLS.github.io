@@ -133,8 +133,8 @@ title: Accueil
     <span lang="en" hidden>Profile</span>
   </h2>
 
-  <div class="profile-body reveal">
-    <div class="profile-block">
+  <div class="profile-body">
+    <div class="profile-block reveal">
       <p class="profile-label">
         <span lang="fr">qui je suis</span>
         <span lang="en" hidden>who I am</span>
@@ -145,7 +145,7 @@ title: Accueil
       </p>
     </div>
 
-    <div class="profile-block">
+    <div class="profile-block reveal">
       <p class="profile-label">
         <span lang="fr">mes débuts</span>
         <span lang="en" hidden>how it started</span>
@@ -156,7 +156,7 @@ title: Accueil
       </p>
     </div>
 
-    <div class="profile-block">
+    <div class="profile-block reveal">
       <p class="profile-label">
         <span lang="fr">mon parcours</span>
         <span lang="en" hidden>what I learned</span>
@@ -167,7 +167,7 @@ title: Accueil
       </p>
     </div>
 
-    <div class="profile-block profile-block-highlight">
+    <div class="profile-block profile-block-highlight reveal">
       <p class="profile-label">
         <span lang="fr">ce que j'aimerais faire</span>
         <span lang="en" hidden>what I'd like to do</span>
