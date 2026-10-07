@@ -80,7 +80,7 @@ layout: default
     {% for item in page.gallery %}
       {% if item contains ".mp4" or item contains ".webm" or item contains ".mov" %}
       <div id="gallery-{{ forloop.index }}" class="gallery-item reveal">
-        <video src="{{ item | relative_url }}" controls preload="none"></video>
+        <video src="{{ item | relative_url }}" autoplay muted loop playsinline controls preload="auto"></video>
         <span class="gallery-index">#{{ forloop.index }}</span>
       </div>
       {% else %}
