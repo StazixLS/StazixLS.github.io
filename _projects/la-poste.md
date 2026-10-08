@@ -14,17 +14,18 @@ image: "/assets/projects/La Poste/Cover.svg"
 video: ""
 video_embed: ""
 gallery:
-  - "/assets/projects/La Poste/Proto Cadena.png"
-  - "/assets/projects/La Poste/Module 2 Cadenas.mp4"
-  - "/assets/projects/La Poste/Outil Halo Inspecteur.mp4"
-  - "/assets/projects/La Poste/Outil Halo Activation.mp4"
-  - "/assets/projects/La Poste/Outil Halo Couleur.mp4"
-  - "/assets/projects/La Poste/Module 1 Parcours Partie 1.mp4"
-  - "/assets/projects/La Poste/Module 1 Parcours Partie 2.mp4"
-  - "/assets/projects/La Poste/Module 1 Parcours Partie 3.mp4"
-  - "/assets/projects/La Poste/Module 1 Verification Klaxon.mp4"
-  - "/assets/projects/La Poste/Module 1 Verification Huile.mp4"
-  - "/assets/projects/La Poste/Menu Debug.mp4"
+  - "/assets/projects/La Poste/Padlock Proto.png"
+  - "/assets/projects/La Poste/Proto Padlock Without Dialogue.mp4"
+  - "/assets/projects/La Poste/Proto Padlock With Dialog.mp4"
+  - "/assets/projects/La Poste/Module 1 Inspection Part1.mp4"
+  - "/assets/projects/La Poste/Module 1 Inspection Part2.mp4"
+  - "/assets/projects/La Poste/Module 1 Inspection Part3.mp4"
+  - "/assets/projects/La Poste/Module 1 Inspection Part4.mp4"
+  - "/assets/projects/La Poste/Module 1 Inspection Part5.mp4"
+  - "/assets/projects/La Poste/La Poste Module 1 With Texture.mp4"
+  - "/assets/projects/La Poste/Outil Halo Debug Mode (Hors Play).mp4"
+  - "/assets/projects/La Poste/Outil Halo Debug Preset (Hors Play).mp4"
+  - "/assets/projects/La Poste/Outil Halo Save Preset (Hors Play).mp4"
 description_fr: >
   Deux modules de formation en réalité virtuelle développés pour La Poste, un vrai projet client mené via l'école (Objectif 3D) avec une équipe de 24 étudiants sur plus de cinq mois au total. Le projet a été présenté publiquement le 27 mars 2026 et couvert par la presse locale (Midi Libre).
 
@@ -32,15 +33,28 @@ description_fr: >
 
   ## Mon rôle
 
-  J'ai travaillé sur les deux modules. En janvier, plutôt en solo, sur le Module 2 (mini-jeu du cadenas, [aperçu ici](#gallery-1)) : architecture des Game/MiniGame Managers, physique et interactions du cadenas, particules, son, un système de quiz avec indices, et quelques méthodes d'extension C# réutilisables (TryGetComponent, GetComponentsInChildren...).
+  J'ai travaillé sur les deux modules. En janvier, plutôt en solo, sur le Module 2 (mini-jeu du cadenas, [aperçu ici](#gallery-2)) : architecture des Game/MiniGame Managers, physique et interactions du cadenas, particules, son, un système de quiz avec indices, et quelques méthodes d'extension C# réutilisables (TryGetComponent, GetComponentsInChildren...).
 
-  À partir de février, avec un camarade, sur toutes les étapes d'interaction du Module 1 (inspection du transpalette, [parcours ici](#gallery-6)). J'ai aussi développé un système de mise en surbrillance des objets interactifs ("Halo"). [Prototype visible ici](#gallery-3).
+  À partir de février, avec un camarade, sur toutes les étapes d'interaction du Module 1 (inspection du transpalette, [parcours ici](#gallery-4)). J'ai aussi développé un système de mise en surbrillance des objets interactifs ("Halo"). [Prototype visible ici](#gallery-10).
+
+  <div class="media-compare">
+    <figure>
+      <img src="/assets/projects/La Poste/Module 1 Greybox.jpg" alt="Module 1 en greybox, sans texture ni décor">
+      <figcaption>Greybox</figcaption>
+    </figure>
+    <figure>
+      <img src="/assets/projects/La Poste/Module 1 Texture.jpg" alt="Module 1 avec décor et textures finales">
+      <figcaption>Version texturée</figcaption>
+    </figure>
+  </div>
+
+  Le même parcours une fois l'environnement texturé, en mouvement : [aperçu ici](#gallery-9).
 
   ## Défis techniques
 
-  Le plus gros morceau a été ce système de Halo. Le composant "Halo" natif d'Unity ne convenait pas du tout, et une autre approche testée ne fonctionnait pas correctement une fois en VR. La solution retenue : un matériau dédié, permutable à la volée. Quand le halo s'active sur un objet, son matériau est remplacé par ce matériau spécial. Le système va jusqu'à un outil de config personnalisé dans l'inspecteur Unity, avec prévisualisation directement hors mode Play ([l'outil en action](#gallery-4)).
+  Le plus gros morceau a été ce système de Halo. Le composant "Halo" natif d'Unity ne convenait pas du tout, et une autre approche testée ne fonctionnait pas correctement une fois en VR. La solution retenue : un matériau dédié, permutable à la volée. Quand le halo s'active sur un objet, son matériau est remplacé par ce matériau spécial. Le système va jusqu'à un outil de config personnalisé dans l'inspecteur Unity, avec prévisualisation directement hors mode Play ([l'outil en action](#gallery-11)) et des presets sauvegardables sur le disque ([aperçu](#gallery-12)).
 
-  Contrainte de prod à noter : l'équipe disposait de peu de casques VR, ce qui a rendu le test de nos mécaniques plus long que prévu. Le compteur de FPS resté affiché en permanence pendant le développement ([aperçu](#gallery-11)) servait à repérer les chutes de performance : en VR, un framerate trop bas peut vite donner la nausée en jeu, donc c'était un point de vigilance constant.
+  Contrainte de prod à noter : l'équipe disposait de peu de casques VR, ce qui a rendu le test de nos mécaniques plus long que prévu. Le compteur de FPS resté affiché en permanence pendant le développement ([aperçu](#gallery-3)) servait à repérer les chutes de performance : en VR, un framerate trop bas peut vite donner la nausée en jeu, donc c'était un point de vigilance constant.
 
   ## Ce que j'en ai retenu
 
@@ -52,15 +66,28 @@ description_en: >
 
   ## My role
 
-  I worked on both modules. In January, mostly solo, on Module 2 (the padlock mini-game, [preview here](#gallery-1)): Game/MiniGame Manager architecture, padlock physics and interactions, particles, sound, a quiz system with hints, and a few reusable C# extension methods (TryGetComponent, GetComponentsInChildren...).
+  I worked on both modules. In January, mostly solo, on Module 2 (the padlock mini-game, [preview here](#gallery-2)): Game/MiniGame Manager architecture, padlock physics and interactions, particles, sound, a quiz system with hints, and a few reusable C# extension methods (TryGetComponent, GetComponentsInChildren...).
 
-  From February onward, alongside a teammate, on all the interaction steps of Module 1 (pallet jack inspection, [walkthrough here](#gallery-6)). I also built a highlight system for interactive objects ("Halo"). [Prototype visible here](#gallery-3).
+  From February onward, alongside a teammate, on all the interaction steps of Module 1 (pallet jack inspection, [walkthrough here](#gallery-4)). I also built a highlight system for interactive objects ("Halo"). [Prototype visible here](#gallery-10).
+
+  <div class="media-compare">
+    <figure>
+      <img src="/assets/projects/La Poste/Module 1 Greybox.jpg" alt="Module 1 in greybox, no textures or set dressing">
+      <figcaption>Greybox</figcaption>
+    </figure>
+    <figure>
+      <img src="/assets/projects/La Poste/Module 1 Texture.jpg" alt="Module 1 with final set dressing and textures">
+      <figcaption>Textured version</figcaption>
+    </figure>
+  </div>
+
+  The same walkthrough once the environment was textured, in motion: [preview here](#gallery-9).
 
   ## Technical challenges
 
-  The biggest piece was this Halo system. Unity's native Halo component didn't work at all, and another approach I tried didn't behave correctly once in VR. The solution: a dedicated material, swapped on the fly. When the halo activates on an object, its material gets replaced with this special one. The system even includes a custom config tool in the Unity inspector, with a preview outside Play mode ([the tool in action](#gallery-4)).
+  The biggest piece was this Halo system. Unity's native Halo component didn't work at all, and another approach I tried didn't behave correctly once in VR. The solution: a dedicated material, swapped on the fly. When the halo activates on an object, its material gets replaced with this special one. The system even includes a custom config tool in the Unity inspector, with a preview outside Play mode ([the tool in action](#gallery-11)) and presets that can be saved to disk ([preview](#gallery-12)).
 
-  Worth noting as a production constraint: the team had very few VR headsets, which made testing our mechanics take longer than expected. The FPS counter left on screen throughout development ([preview](#gallery-11)) was there to catch performance drops early: in VR, a framerate that's too low can quickly cause motion sickness, so it was something we kept a constant eye on.
+  Worth noting as a production constraint: the team had very few VR headsets, which made testing our mechanics take longer than expected. The FPS counter left on screen throughout development ([preview](#gallery-3)) was there to catch performance drops early: in VR, a framerate that's too low can quickly cause motion sickness, so it was something we kept a constant eye on.
 
   ## What I took away from it
 
