@@ -6,7 +6,11 @@ title: Accueil
 <section id="about" class="pane">
   <p class="pane-label">About.cs</p>
   {% if site.avatar and site.avatar != "" %}
+  {% if site.avatar contains "://" %}
+  <img src="{{ site.avatar }}" alt="{{ site.author }}" class="hero-avatar">
+  {% else %}
   <img src="{{ site.avatar | relative_url }}" alt="{{ site.author }}" class="hero-avatar">
+  {% endif %}
   {% endif %}
   <h1 class="hero-name">Sev FORNER<span class="cursor">_</span></h1>
   <p class="hero-role">

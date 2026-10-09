@@ -56,9 +56,9 @@ rien changer à ta config ni passer par un hébergement externe. Le site reste �
 - `image` / `video` / `video_embed`: média principal, affiché en haut de la carte ET en haut de
   la page dédiée. Ne remplis qu'un seul des trois
 - `favicon`: icône de l'onglet du navigateur pour la page de ce projet uniquement (chemin vers
-  une image dans `assets/`, ex: `/assets/projects/mon-jeu/icon.png`), affichée en carré avec les
-  bords arrondis. Laisse `favicon: ""` (ou un chemin qui n'existe pas) pour utiliser ta photo de
-  profil GitHub à la place — voir "Photo de profil & icône de l'onglet" plus bas
+  une image dans `assets/`, ex: `/assets/projects/mon-jeu/icon.png`). Laisse `favicon: ""` (ou un
+  chemin qui n'existe pas) pour utiliser ta photo de profil GitHub à la place — voir "Photo de
+  profil & icône de l'onglet" plus bas
 - `gallery`: liste d'images/vidéos supplémentaires, affichées en bas de la page dédiée du projet
   (pas sur la carte d'accueil — trop petit pour bien les montrer)
 - `locked`: mets `true` pour un projet encore en cours que tu ne veux pas détailler publiquement.
@@ -76,16 +76,19 @@ Dans `_config.yml`, remplis `avatar` avec le chemin vers ta photo (ex: `/assets/
 Mets le fichier dans `assets/`. Laisse `avatar: ""` si tu ne veux pas de photo — la section About
 s'affiche normalement sans.
 
-Par défaut, `avatar` est réglé sur `https://github.com/ton-pseudo.png`, qui récupère directement
-ta photo de profil GitHub — elle se met à jour toute seule si tu la changes sur GitHub, rien à
-retoucher ici. Cette même image sert aussi d'icône dans l'onglet du navigateur pour tout le site
-(affichée en rond).
+Par défaut, `avatar` est réglé sur l'URL CDN de ta photo de profil GitHub — elle se met à jour
+toute seule si tu la changes sur GitHub, rien à retoucher ici. Cette même image sert aussi d'icône
+dans l'onglet du navigateur pour tout le site. Dans la section About, elle s'affiche toujours en
+rond (ça, c'est juste du CSS). Dans l'onglet du navigateur en revanche, elle garde sa forme
+d'origine : les navigateurs ne permettent pas de forcer la forme de l'icône d'onglet par CSS, donc
+impossible de la rendre ronde là-bas de façon fiable — en pratique ta photo GitHub est déjà
+recadrée en carré, donc ça reste propre.
 
-Pour une page de projet précise, tu peux afficher une icône différente dans l'onglet (affichée en
-carré avec les bords arrondis, pour la distinguer visuellement de l'icône ronde du reste du site)
-via le champ `favicon` dans le `.md` du projet (voir "Structure d'un projet" plus haut). Si tu le
-laisses vide ou que le chemin pointe vers un fichier qui n'existe pas, ta photo de profil GitHub
-est utilisée automatiquement à la place, comme pour le reste du site.
+Pour une page de projet précise, tu peux afficher une icône différente dans l'onglet via le champ
+`favicon` dans le `.md` du projet (voir "Structure d'un projet" plus haut) — mets un fichier déjà
+dans la forme que tu veux (carré à bords arrondis par exemple), l'image est utilisée telle quelle.
+Si tu le laisses vide ou que le chemin pointe vers un fichier qui n'existe pas, ta photo de profil
+GitHub est utilisée automatiquement à la place, comme pour le reste du site.
 
 ## Comparaison avant / après (2 images côte à côte)
 Pour montrer une évolution (ex: version greybox vs version finale), utilise ce petit bloc HTML
