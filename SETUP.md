@@ -55,6 +55,10 @@ rien changer à ta config ni passer par un hébergement externe. Le site reste �
 - `link`: lien externe optionnel (Steam, page du studio, itch.io...), affiché en plus du lien interne
 - `image` / `video` / `video_embed`: média principal, affiché en haut de la carte ET en haut de
   la page dédiée. Ne remplis qu'un seul des trois
+- `favicon`: icône de l'onglet du navigateur pour la page de ce projet uniquement (chemin vers
+  une image dans `assets/`, ex: `/assets/projects/mon-jeu/icon.png`), affichée en carré avec les
+  bords arrondis. Laisse `favicon: ""` (ou un chemin qui n'existe pas) pour utiliser ta photo de
+  profil GitHub à la place — voir "Photo de profil & icône de l'onglet" plus bas
 - `gallery`: liste d'images/vidéos supplémentaires, affichées en bas de la page dédiée du projet
   (pas sur la carte d'accueil — trop petit pour bien les montrer)
 - `locked`: mets `true` pour un projet encore en cours que tu ne veux pas détailler publiquement.
@@ -67,10 +71,21 @@ rien changer à ta config ni passer par un hébergement externe. Le site reste �
 Duplique un fichier dans `_projects/`, donne-lui un nom de fichier différent (ex: `mon-jeu.md`).
 Il apparaît automatiquement dans la grille (à la bonne place selon sa date) et obtient sa propre page.
 
-## Photo de profil
+## Photo de profil & icône de l'onglet
 Dans `_config.yml`, remplis `avatar` avec le chemin vers ta photo (ex: `/assets/avatar.jpg`).
 Mets le fichier dans `assets/`. Laisse `avatar: ""` si tu ne veux pas de photo — la section About
 s'affiche normalement sans.
+
+Par défaut, `avatar` est réglé sur `https://github.com/ton-pseudo.png`, qui récupère directement
+ta photo de profil GitHub — elle se met à jour toute seule si tu la changes sur GitHub, rien à
+retoucher ici. Cette même image sert aussi d'icône dans l'onglet du navigateur pour tout le site
+(affichée en rond).
+
+Pour une page de projet précise, tu peux afficher une icône différente dans l'onglet (affichée en
+carré avec les bords arrondis, pour la distinguer visuellement de l'icône ronde du reste du site)
+via le champ `favicon` dans le `.md` du projet (voir "Structure d'un projet" plus haut). Si tu le
+laisses vide ou que le chemin pointe vers un fichier qui n'existe pas, ta photo de profil GitHub
+est utilisée automatiquement à la place, comme pour le reste du site.
 
 ## Comparaison avant / après (2 images côte à côte)
 Pour montrer une évolution (ex: version greybox vs version finale), utilise ce petit bloc HTML

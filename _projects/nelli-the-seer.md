@@ -11,6 +11,7 @@ summary_en: "Designed part of the UI and gamepad navigation for an action-advent
 tags: ["Unreal Engine 5", "C++", "Blueprint", "UI/UX"]
 link: "https://store.steampowered.com/app/3801320/Nelli_The_Seer/"
 image: "/assets/projects/Nelli The Seer/Cover.png"
+favicon: ""
 video: ""
 video_embed: ""
 gallery:

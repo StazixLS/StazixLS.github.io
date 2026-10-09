@@ -11,6 +11,7 @@ summary_en: "Contributed to the mechanics and interactions of two VR training mo
 tags: ["Unity", "C#", "VR"]
 link: "https://www.linkedin.com/posts/santaezsaezcuritaeztravail-laposte-ugcPost-7447257936340455425-iHXG/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGP3VwcBC5j46txAf7VX7F60ZpaOPMh-gRc"
 image: "/assets/projects/La Poste/Cover.svg"
+favicon: "/assets/projects/La Poste/Favicon.png"
 video: ""
 video_embed: ""
 gallery:
