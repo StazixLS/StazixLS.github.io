@@ -7,9 +7,9 @@ title: Accueil
   <p class="pane-label">About.cs</p>
   {% if site.avatar and site.avatar != "" %}
   {% if site.avatar contains "://" %}
-  <img src="{{ site.avatar }}" alt="{{ site.author }}" class="hero-avatar">
+  <img src="{{ site.avatar }}" alt="{{ site.author }}" class="hero-avatar" onerror="this.remove()">
   {% else %}
-  <img src="{{ site.avatar | relative_url }}" alt="{{ site.author }}" class="hero-avatar">
+  <img src="{{ site.avatar | relative_url }}" alt="{{ site.author }}" class="hero-avatar" onerror="this.remove()">
   {% endif %}
   {% endif %}
   <h1 class="hero-name">Sev FORNER<span class="cursor">_</span></h1>
