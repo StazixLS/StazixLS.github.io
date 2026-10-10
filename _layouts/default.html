@@ -6,16 +6,20 @@
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ site.description }}">
   {% comment %}
-    Favicon: GitHub avatar site-wide. On a project page, page.favicon
-    overrides it if set and valid (checked against site.static_files),
-    otherwise it falls back to the avatar too. The avatar is round in the
-    About section (plain CSS on a real <img>); any per-project favicon
-    image is expected to already be a rounded square baked into the PNG
-    itself, since browsers don't reliably let a live cross-origin SVG clip
-    reshape the native tab icon.
+    Favicon: GitHub avatar site-wide, shown as a circle. On a project page,
+    page.favicon overrides it if set and valid (checked against
+    site.static_files), shown as a rounded square — falls back to the
+    avatar (also rounded-square) when unset/invalid, so a project tab is
+    always visually distinct from the main site. The 404 page gets its
+    own fixed icon instead. Browsers don't let CSS touch the native tab
+    icon, so the shape is baked into real pixels at runtime via <canvas>;
+    if that fails (e.g. a cross-origin image without permissive CORS), it
+    quietly keeps the plain, unshaped icon set below instead of breaking.
   {% endcomment %}
   {% assign icon_url = site.avatar %}
+  {% assign icon_shape = "circle" %}
   {% if page.layout == "project" %}
+    {% assign icon_shape = "rounded" %}
     {% assign favicon_valid = false %}
     {% if page.favicon and page.favicon != "" %}
       {% for f in site.static_files %}
@@ -28,8 +32,56 @@
       {% assign icon_url = page.favicon | absolute_url %}
     {% endif %}
   {% endif %}
+  {% if page.url == "/404.html" %}
+    {% assign icon_url = "/assets/missing-texture.png" | absolute_url %}
+    {% assign icon_shape = "none" %}
+  {% endif %}
   {% if icon_url and icon_url != "" %}
-  <link rel="icon" href="{{ icon_url }}">
+  <link rel="icon" id="js-favicon" href="{{ icon_url }}">
+  {% if icon_shape != "none" %}
+  <script>
+  (function () {
+    var link = document.getElementById('js-favicon');
+    var shape = {{ icon_shape | jsonify }};
+    var img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = function () {
+      try {
+        var size = 64;
+        var canvas = document.createElement('canvas');
+        canvas.width = size;
+        canvas.height = size;
+        var ctx = canvas.getContext('2d');
+        ctx.save();
+        ctx.beginPath();
+        if (shape === 'circle') {
+          ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+        } else {
+          var r = size * 0.22;
+          ctx.moveTo(r, 0);
+          ctx.arcTo(size, 0, size, size, r);
+          ctx.arcTo(size, size, 0, size, r);
+          ctx.arcTo(0, size, 0, 0, r);
+          ctx.arcTo(0, 0, size, 0, r);
+        }
+        ctx.closePath();
+        ctx.clip();
+        var sw = img.naturalWidth || size;
+        var sh = img.naturalHeight || size;
+        var scale = Math.max(size / sw, size / sh);
+        var dw = sw * scale, dh = sh * scale;
+        ctx.drawImage(img, (size - dw) / 2, (size - dh) / 2, dw, dh);
+        ctx.restore();
+        link.href = canvas.toDataURL('image/png');
+      } catch (e) {
+        /* Tainted canvas (no CORS) or other failure: leave the plain
+           icon already set above. Never worse than before. */
+      }
+    };
+    img.src = {{ icon_url | jsonify }};
+  })();
+  </script>
+  {% endif %}
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
