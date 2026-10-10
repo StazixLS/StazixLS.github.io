@@ -11,7 +11,7 @@ summary_en: "all game"
 tags: ["UE5", "C++", "Multiplayer"]
 link: ""
 image: "/assets/projects/OProtocol/SplashScreen.png"
-favicon: ""
+favicon: "/assets/projects/OProtocol/Flavicon.png"
 video: ""
 video_embed: ""
 gallery: []
