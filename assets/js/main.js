@@ -21,31 +21,36 @@ document.addEventListener('DOMContentLoaded', () => {
     panes.forEach((pane) => observer.observe(pane));
   }
 
-  const revealTargets = document.querySelectorAll('.reveal');
-  if (revealTargets.length) {
-    if ('IntersectionObserver' in window) {
-      // Reveal as soon as an element is 15% visible, but only hide it again
-      // once it has fully left the viewport. A single threshold used to hide
-      // elements the moment they dipped below ~15% visible — which could
-      // still be most of the element on screen — leaving a gap where content
-      // the user was still looking at had faded out.
-      const revealObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.intersectionRatio >= 0.15) {
-              entry.target.classList.add('in-view');
-            } else if (entry.intersectionRatio <= 0) {
-              entry.target.classList.remove('in-view');
-            }
-            // Between 0 and 0.15: leave the current state alone (hysteresis).
-          });
-        },
-        { threshold: [0, 0.15] }
-      );
-      revealTargets.forEach((el) => revealObserver.observe(el));
-    } else {
-      revealTargets.forEach((el) => el.classList.add('in-view'));
-    }
+  // Gallery videos: play only while on screen, so the page doesn't download
+  // and decode several large clips at once. A video the visitor paused by
+  // hand stays paused. Nothing autoplays under prefers-reduced-motion.
+  const galleryVideos = document.querySelectorAll('.gallery-item video');
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (galleryVideos.length && 'IntersectionObserver' in window && !reduceMotion) {
+    const videoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target;
+          if (entry.isIntersecting) {
+            if (!video.dataset.userPaused) video.play().catch(() => {});
+          } else if (!video.paused) {
+            video.dataset.autoPaused = '1';
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    galleryVideos.forEach((video) => {
+      video.addEventListener('pause', () => {
+        if (video.dataset.autoPaused) delete video.dataset.autoPaused;
+        else video.dataset.userPaused = '1';
+      });
+      video.addEventListener('play', () => {
+        delete video.dataset.userPaused;
+      });
+      videoObserver.observe(video);
+    });
   }
 });
 

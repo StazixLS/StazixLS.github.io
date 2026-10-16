@@ -60,7 +60,9 @@ rien changer à ta config ni passer par un hébergement externe. Le site reste �
   chemin qui n'existe pas) pour utiliser ta photo de profil GitHub à la place — voir "Photo de
   profil & icône de l'onglet" plus bas
 - `gallery`: liste d'images/vidéos supplémentaires, affichées en bas de la page dédiée du projet
-  (pas sur la carte d'accueil — trop petit pour bien les montrer)
+  (pas sur la carte d'accueil — trop petit pour bien les montrer). Les vidéos se lancent toutes
+  seules (muettes, en boucle) uniquement quand elles sont à l'écran, et se mettent en pause
+  quand tu défiles plus loin ; une vidéo que tu mets en pause toi-même reste en pause
 - `locked`: mets `true` pour un projet encore en cours que tu ne veux pas détailler publiquement.
   La carte reste visible (titre, tags, dates, résumé) mais le lien "en savoir plus" est remplacé
   par "🔒 Bientôt disponible". La page dédiée existe toujours si quelqu'un devine/tape l'URL, mais
@@ -77,18 +79,23 @@ Mets le fichier dans `assets/`. Laisse `avatar: ""` si tu ne veux pas de photo �
 s'affiche normalement sans.
 
 Par défaut, `avatar` est réglé sur l'URL CDN de ta photo de profil GitHub — elle se met à jour
-toute seule si tu la changes sur GitHub, rien à retoucher ici. Cette même image sert aussi d'icône
-dans l'onglet du navigateur pour tout le site. Dans la section About, elle s'affiche toujours en
-rond (ça, c'est juste du CSS). Dans l'onglet du navigateur en revanche, elle garde sa forme
-d'origine : les navigateurs ne permettent pas de forcer la forme de l'icône d'onglet par CSS, donc
-impossible de la rendre ronde là-bas de façon fiable — en pratique ta photo GitHub est déjà
-recadrée en carré, donc ça reste propre.
+toute seule si tu la changes sur GitHub, rien à retoucher ici. Dans la section About, elle s'affiche
+en rond (CSS).
 
-Pour une page de projet précise, tu peux afficher une icône différente dans l'onglet via le champ
-`favicon` dans le `.md` du projet (voir "Structure d'un projet" plus haut) — mets un fichier déjà
-dans la forme que tu veux (carré à bords arrondis par exemple), l'image est utilisée telle quelle.
-Si tu le laisses vide ou que le chemin pointe vers un fichier qui n'existe pas, ta photo de profil
-GitHub est utilisée automatiquement à la place, comme pour le reste du site.
+Icône de l'onglet : les navigateurs ne laissent pas le CSS toucher à l'icône d'onglet, donc la
+forme est appliquée automatiquement par un petit script au chargement de la page (rognage sur un
+canvas). Tu n'as jamais besoin d'arrondir tes images toi-même, n'importe quel PNG carré fait
+l'affaire :
+- **Page d'accueil** : ta photo de profil, en rond
+- **Page d'un projet** : le `favicon` du projet, en carré à bords arrondis. Si le champ est vide ou
+  pointe vers un fichier qui n'existe pas, c'est ta photo de profil en carré arrondi (pour qu'on
+  distingue un onglet projet de l'onglet principal)
+- **Page 404** : une texture "manquante" rose/noir (`assets/missing-texture.png`), sans rognage
+
+Si le navigateur refuse de lire l'image pour la rogner (image externe sans CORS, par exemple),
+l'icône d'origine est affichée telle quelle : ça ne casse rien, elle est juste non arrondie.
+Pour un `favicon` de projet, prends une image locale dans `assets/` (256×256 suffit, garde-la
+légère).
 
 ## Comparaison avant / après (2 images côte à côte)
 Pour montrer une évolution (ex: version greybox vs version finale), utilise ce petit bloc HTML
@@ -254,7 +261,7 @@ description_fr: >
 ```
 
 Ça donne un vrai lien (rose, souligné) dans le texte — au clic, la page défile jusqu'à l'image
-n°2 de la galerie, qui s'illumine brièvement pour qu'on la repère. Les deux approches (image en
+n°2 de la galerie, qui reçoit un contour rose pour qu'on la repère. Les deux approches (image en
 plein milieu du texte, et lien texte → galerie) marchent en même temps, tu choisis au cas par cas
 ce qui convient le mieux à chaque média.
 

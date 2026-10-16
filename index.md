@@ -44,7 +44,7 @@ title: Accueil
     {% assign sorted_projects = site.projects | sort: "start_date" | reverse %}
     {% for project in sorted_projects %}
     {% assign vt_slug = project.title_fr | slugify %}
-    <article class="card reveal" id="project-{{ vt_slug }}">
+    <article class="card" id="project-{{ vt_slug }}">
       {% if project.image and project.image != "" %}
       <div class="card-media" style="view-transition-name: card-media-{{ vt_slug }};">
         <img src="{{ project.image | relative_url }}" alt="{{ project.title_fr }}" loading="lazy">
@@ -138,7 +138,7 @@ title: Accueil
   </h2>
 
   <div class="profile-body">
-    <div class="profile-block reveal">
+    <div class="profile-block">
       <p class="profile-label">
         <span lang="fr">qui je suis</span>
         <span lang="en" hidden>who I am</span>
@@ -149,7 +149,7 @@ title: Accueil
       </p>
     </div>
 
-    <div class="profile-block reveal">
+    <div class="profile-block">
       <p class="profile-label">
         <span lang="fr">mes débuts</span>
         <span lang="en" hidden>how it started</span>
@@ -160,7 +160,7 @@ title: Accueil
       </p>
     </div>
 
-    <div class="profile-block reveal">
+    <div class="profile-block">
       <p class="profile-label">
         <span lang="fr">mon parcours</span>
         <span lang="en" hidden>what I learned</span>
@@ -171,7 +171,7 @@ title: Accueil
       </p>
     </div>
 
-    <div class="profile-block profile-block-highlight reveal">
+    <div class="profile-block profile-block-highlight">
       <p class="profile-label">
         <span lang="fr">ce que j'aimerais faire</span>
         <span lang="en" hidden>what I'd like to do</span>
@@ -188,7 +188,7 @@ title: Accueil
   <p class="pane-label">Contact.xaml</p>
   <h2 class="pane-title">Contact</h2>
 
-  <div class="output-panel reveal">
+  <div class="output-panel">
     <div class="output-bar">
       <span class="output-title">Output</span>
       <span class="output-scope">
@@ -200,8 +200,8 @@ title: Accueil
       <p class="oline">1&gt;------ Build started: Project: Contact, Configuration: Release Any CPU ------</p>
       <p class="oline">
         1&gt;&nbsp;
-        <span lang="fr">Sev FORNER — ouvert aux opportunités</span>
-        <span lang="en" hidden>Sev FORNER — open to opportunities</span>
+        <span lang="fr">Sev FORNER : ouvert aux opportunités</span>
+        <span lang="en" hidden>Sev FORNER: open to opportunities</span>
       </p>
       <p class="oline">1&gt;  Resolving reference <a href="mailto:[ton.email@exemple.com]">Mail</a>... <span class="ok">OK</span></p>
       <p class="oline">1&gt;  Resolving reference <a href="https://github.com/{{ site.author }}" target="_blank" rel="noopener">GitHub</a>... <span class="ok">OK</span></p>

@@ -56,8 +56,8 @@ layout: default
   {% if page.locked %}
   <div class="locked-notice">
     <p>
-      <span lang="fr">🔒 Ce projet est encore en cours de développement — les détails ne sont pas encore publics.</span>
-      <span lang="en" hidden>🔒 This project is still in development — details aren't public yet.</span>
+      <span lang="fr">🔒 Ce projet est encore en cours de développement. Les détails ne sont pas encore publics.</span>
+      <span lang="en" hidden>🔒 This project is still in development. Details aren't public yet.</span>
     </p>
   </div>
   {% else %}
@@ -69,7 +69,7 @@ layout: default
   </a>
   {% endif %}
 
-  <div class="project-body reveal">
+  <div class="project-body">
     <div lang="fr">{{ page.description_fr | markdownify }}</div>
     <div lang="en" hidden>{{ page.description_en | default: page.description_fr | markdownify }}</div>
   </div>
@@ -79,12 +79,12 @@ layout: default
   <div class="project-gallery">
     {% for item in page.gallery %}
       {% if item contains ".mp4" or item contains ".webm" or item contains ".mov" %}
-      <div id="gallery-{{ forloop.index }}" class="gallery-item reveal">
-        <video src="{{ item | relative_url }}" autoplay muted loop playsinline controls preload="auto"></video>
+      <div id="gallery-{{ forloop.index }}" class="gallery-item">
+        <video src="{{ item | relative_url }}#t=0.001" muted loop playsinline controls preload="metadata"></video>
         <span class="gallery-index">#{{ forloop.index }}</span>
       </div>
       {% else %}
-      <a id="gallery-{{ forloop.index }}" class="gallery-item reveal" href="{{ item | relative_url }}" target="_blank" rel="noopener">
+      <a id="gallery-{{ forloop.index }}" class="gallery-item" href="{{ item | relative_url }}" target="_blank" rel="noopener">
         <img src="{{ item | relative_url }}" alt="" loading="lazy">
         <span class="gallery-index">#{{ forloop.index }}</span>
       </a>

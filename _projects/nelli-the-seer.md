@@ -4,8 +4,8 @@ end_date: "2025-07"
 project_type: "student"
 title_fr: "Nelli the Seer"
 title_en: "Nelli the Seer"
-subtitle_fr: "Projet étudiant — Action-aventure & puzzle-platformer"
-subtitle_en: "Student Project — Action-Adventure & Puzzle-Platformer"
+subtitle_fr: "Projet étudiant : action-aventure & puzzle-platformer"
+subtitle_en: "Student project: action-adventure & puzzle-platformer"
 summary_fr: "Conception d'une partie de l'UI et de la navigation manette d'un action-aventure sorti sur Steam."
 summary_en: "Designed part of the UI and gamepad navigation for an action-adventure released on Steam."
 tags: ["Unreal Engine 5", "C++", "Blueprint", "UI/UX"]
@@ -29,7 +29,7 @@ description_fr: |
 
   ## Mon rôle
 
-  Mon travail s'est concentré sur l'UI et l'UX du jeu : conception d'une architecture de widgets réutilisables (BaseWidget, BaseButton, BasePanel, BaseMenu...), et implémentation d'une partie des menus — accueil, sélection de niveau ([aperçu](#gallery-2)), options, pause, crédits, collectibles — avec prise en charge clavier/souris et manette, en collaboration avec le reste de l'équipe UI.
+  Mon travail s'est concentré sur l'UI et l'UX du jeu : conception d'une architecture de widgets réutilisables (BaseWidget, BaseButton, BasePanel, BaseMenu...), et implémentation d'une partie des menus : accueil, sélection de niveau ([aperçu](#gallery-2)), options, pause, crédits, collectibles. Le tout avec prise en charge clavier/souris et manette, en collaboration avec le reste de l'équipe UI.
 
   <div class="media-compare">
     <figure>
@@ -59,7 +59,7 @@ description_fr: |
 
   ## Défis techniques
 
-  Trois systèmes m'ont donné le plus de fil à retordre : le focus system (à quel widget la manette/le clavier "s'accroche", [aperçu ici](#gallery-5)), le menu pause, et la détection + rebind clavier ↔ manette. Ce trio a dû être solidifié une seconde fois lors de la migration d'Unreal Engine 5.4.4 (v1.0.0) vers 5.6.1 (v1.1.0), qui a cassé une partie du système existant — d'où les trois versions du menu de remapping ci-dessus.
+  Trois systèmes m'ont donné le plus de fil à retordre : le focus system (à quel widget la manette/le clavier "s'accroche", [aperçu ici](#gallery-5)), le menu pause, et la détection + rebind clavier ↔ manette. Ce trio a dû être solidifié une seconde fois lors de la migration d'Unreal Engine 5.4.4 (v1.0.0) vers 5.6.1 (v1.1.0), qui a cassé une partie du système existant. D'où les trois versions du menu de remapping ci-dessus.
 
   ## Ce dont je suis le plus fier
 
@@ -81,7 +81,7 @@ description_en: |
 
   ## My role
 
-  My work focused on the game's UI and UX: designing a reusable widget architecture (BaseWidget, BaseButton, BasePanel, BaseMenu...), and implementing part of the menus — main menu, level select ([preview](#gallery-2)), options, pause, credits, collectibles — with keyboard/mouse and gamepad support, alongside the rest of the UI team.
+  My work focused on the game's UI and UX: designing a reusable widget architecture (BaseWidget, BaseButton, BasePanel, BaseMenu...), and implementing part of the menus: main menu, level select ([preview](#gallery-2)), options, pause, credits, collectibles. All with keyboard/mouse and gamepad support, alongside the rest of the UI team.
 
   <div class="media-compare">
     <figure>
@@ -111,7 +111,7 @@ description_en: |
 
   ## Technical challenges
 
-  Three systems gave me the most trouble: the focus system (which widget the gamepad/keyboard is "attached" to, [preview here](#gallery-5)), the pause menu, and keyboard-to-gamepad detection + rebinding. This trio had to be reinforced a second time during the migration from Unreal Engine 5.4.4 (v1.0.0) to 5.6.1 (v1.1.0), which broke part of the existing system — hence the three versions of the remapping menu above.
+  Three systems gave me the most trouble: the focus system (which widget the gamepad/keyboard is "attached" to, [preview here](#gallery-5)), the pause menu, and keyboard-to-gamepad detection + rebinding. This trio had to be reinforced a second time during the migration from Unreal Engine 5.4.4 (v1.0.0) to 5.6.1 (v1.1.0), which broke part of the existing system, hence the three versions of the remapping menu above.
 
   ## What I'm most proud of
 
