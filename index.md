@@ -188,7 +188,7 @@ title: Accueil
   <p class="pane-label">Contact.xaml</p>
   <h2 class="pane-title">Contact</h2>
 
-  <div class="output-panel">
+  <div class="output-panel" data-compile>
     <div class="output-bar">
       <span class="output-title">Output</span>
       <span class="output-scope">
@@ -203,9 +203,9 @@ title: Accueil
         <span lang="fr">Sev FORNER : ouvert aux opportunités</span>
         <span lang="en" hidden>Sev FORNER: open to opportunities</span>
       </p>
-      <p class="oline">1&gt;  Resolving reference <a href="mailto:[ton.email@exemple.com]">Mail</a>... <span class="ok">OK</span></p>
-      <p class="oline">1&gt;  Resolving reference <a href="https://github.com/{{ site.author }}" target="_blank" rel="noopener">GitHub</a>... <span class="ok">OK</span></p>
-      <p class="oline">1&gt;  Resolving reference <a href="https://linkedin.com/in/[ton-linkedin]" target="_blank" rel="noopener">LinkedIn</a>... <span class="ok">OK</span></p>
+      <p class="oline">1&gt;  Resolving reference <a href="mailto:[ton.email@exemple.com]">Mail</a>... <span class="status ok">OK</span></p>
+      <p class="oline">1&gt;  Resolving reference <a href="https://github.com/{{ site.author }}" target="_blank" rel="noopener">GitHub</a>... <span class="status ok">OK</span></p>
+      <p class="oline">1&gt;  Resolving reference <a href="https://linkedin.com/in/[ton-linkedin]" target="_blank" rel="noopener">LinkedIn</a>... <span class="status ok">OK</span></p>
       <p class="oline oline-summary">========== Build: 1 succeeded, 0 failed ==========</p>
     </div>
   </div>

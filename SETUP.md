@@ -265,6 +265,17 @@ n°2 de la galerie, qui reçoit un contour rose pour qu'on la repère. Les deux 
 plein milieu du texte, et lien texte → galerie) marchent en même temps, tu choisis au cas par cas
 ce qui convient le mieux à chaque média.
 
+## Animation de "compilation" (Contact et 404)
+Les panneaux "Output" de la section Contact et de la page 404 font semblant de compiler : les lignes
+s'affichent une par une, chaque statut tourne (`| / - \`) puis finit sur `OK` (Contact) ou `FAILED`
+(404). Ça se lance une seule fois, quand le panneau arrive à l'écran, et dure environ 1,5 s. Les
+liens (Mail, GitHub, LinkedIn) sont déjà dans la page et un clic sur le panneau saute directement
+à la fin. Sans JavaScript, ou si le visiteur a réduit les animations, tout s'affiche tout de suite.
+
+Pour l'activer sur un autre panneau : ajoute `data-compile` sur son `<div class="output-panel">` et
+mets `class="status ok"` (ou `status fail`) sur le mot de fin de ligne (`OK`, `FAILED`...). Les
+durées se règlent en haut du bloc dans `assets/js/main.js` (`LINE_MS` et `SPIN_MS`).
+
 ## Langue FR / EN
 Le site est bilingue : un bouton FR/EN en haut à droite bascule tout le texte, et le choix est
 mémorisé dans le navigateur du visiteur. Ça marche avec le Jekyll natif de GitHub Pages (pas besoin

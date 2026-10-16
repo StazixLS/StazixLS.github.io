@@ -330,6 +330,12 @@ a { color: inherit; text-decoration: none; }
 .oline a { color: var(--foam); }
 .oline a:hover { color: var(--rose); text-decoration: underline; }
 .oline .ok { color: #9ece6a; font-weight: 500; }
+.oline .fail { color: var(--rose); font-weight: 500; }
+.oline .status.is-pending { color: var(--muted); font-weight: 400; }
+/* Fake build: main.js adds .is-compiling and reveals the lines one by one.
+   Space stays reserved (visibility, not display), so nothing jumps. Without
+   JS the class is never added and every line is simply visible. */
+.output-panel.is-compiling .oline:not(.is-shown) { visibility: hidden; }
 .oline-summary { color: #9ece6a; margin-top: 12px; }
 .oline-error { color: var(--rose); }
 .oline-summary-fail { color: var(--rose); margin-top: 12px; }
